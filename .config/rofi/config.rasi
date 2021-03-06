@@ -1,0 +1,8 @@
+configuration {
+	theme: "~/.config/rofi/retr0-dmenu.rasi";
+    display-run: "run";
+    display-drun: "app";
+    display-window: "wnd";
+    display-file-browser: "fbr";
+    modi: "run,drun,window,file-browser";
+}
