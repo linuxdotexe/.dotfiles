@@ -24,7 +24,6 @@ theme_gruvbox dark medium
 
 alias fc='sudo pacman -Rsn (pacman -Qdtq)'
 alias f='clear'
-alias neofetch='neofetch --source ~/.ascu.txt --colors 4 7 7 6 7 4'
 alias q='exit'
 alias py='python3'
 alias maxbr='xrandr --output eDP-1 --brightness 2'
