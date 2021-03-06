@@ -1,5 +1,15 @@
 add_newline = false
 [character]
-success_symbol = "[](bold green)"
+success_symbol = "[](bold blue)"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold green)"
 [package]
+disabled = true
+[conda]
+disabled = true
+[java]
+disabled = true
+[lua]
+disabled = true
+[nodejs]
 disabled = true
