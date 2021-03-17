@@ -24,5 +24,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+    Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
 
 call plug#end()

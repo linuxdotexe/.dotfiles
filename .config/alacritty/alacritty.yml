@@ -49,7 +49,7 @@ font:
 
     italic:
         family: BlexMono Nerd Font Mono
-        style: SemiBold Italic
+        style: Bold Italic
     size: 8
 
     # Offset is the extra space around each character. `offset.y` can be thought of

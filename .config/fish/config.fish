@@ -55,7 +55,8 @@ alias curd='xinput disable command(xinput | grep Synaptics | grep -oP "id=\K..")
 set enn (xinput | grep Synaptics | grep -oP "id=\K..")
 alias curd='xinput disable $enn'
 alias cure='xinput enable $enn'
-alias pomu='python3 ~/HDD/programs/pomu/pomu.py'
+alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
+alias fd='fd -I'
 # Aliases - End
 
 # Define Spicetify path
