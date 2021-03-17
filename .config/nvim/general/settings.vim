@@ -72,3 +72,4 @@ endfunction
 autocmd VimEnter * call StartUp()
 " You can't stop me
 cmap w!! w !sudo tee %
+autocmd BufEnter *.md execute "CocDisable"
