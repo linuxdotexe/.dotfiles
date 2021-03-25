@@ -10,7 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'scrooloose/NERDTree'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'neoclide/coc.nvim', {'branch' : 'release'}
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
@@ -25,5 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-surround'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
     Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
-
+    Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+    Plug 'p00f/nvim-ts-rainbow'
+    Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()

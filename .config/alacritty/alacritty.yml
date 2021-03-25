@@ -30,9 +30,9 @@ window:
     #   - Fullscreen
     #startup_mode: Windowed
     # Window title
-    title: Terminal
+    #title: Terminal
     # Window class (Linux only):
-    class: Terminal
+    #class: Terminal
 scrolling:
     # Maximum number of lines in the scrollback buffer.
     history: 10000

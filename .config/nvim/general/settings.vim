@@ -30,13 +30,12 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set number                              " Sets line numbers by default
-"set autochdir                           " Your working directory will always be the same as your working directory
+"set autochdir                          " Your working directory will always be the same as your working directory
 set fileformat=unix
 set encoding=utf-8
 set fileencoding=utf-8
 
 let NERDTreeMinimalUI = 1
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " Return to last edit position when opening files
@@ -72,4 +71,14 @@ endfunction
 autocmd VimEnter * call StartUp()
 " You can't stop me
 cmap w!! w !sudo tee %
-autocmd BufEnter *.md execute "CocDisable"
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+    rainbow = {                                                                                                                                                                 
+        enable = true                                                                                                                                                             
+        }                                                                                                                                                                           
+    }                                                                                                                                                                             
+EOF
+
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
