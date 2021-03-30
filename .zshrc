@@ -64,13 +64,13 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # EO zsh-autocompletions
 
 # zsh-fast-syntax-highlighting
-source /home/retr0/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/admin/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ./.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # EO zsh-fast-syntax-highlighting
 
 # insulter
-if [ -f ~/zsh-insulter/src/zsh.command-not-found ]; then
-    . ~/zsh-insulter/src/zsh.command-not-found
+if [ -f ~/.zsh/zsh-insulter/src/zsh.command-not-found ]; then
+    . ~/.zsh/zsh-insulter/src/zsh.command-not-found
 fi
 # EO insulter
 
