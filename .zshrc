@@ -90,8 +90,25 @@ mkd(){
 # End mkdir-cd.fish
 ### EO razzius/fish-functions ###
 
-case $TERM in
-    xterm*)
-        precmd () {print -Pn "\e]0;%~\a"}
+case "$TERM" in
+    xterm*|rxvt*)
+        function xtitle () {
+            builtin print -n -- "\e]0;$@\a"
+        }
         ;;
+    screen)
+        function xtitle () {
+            builtin print -n -- "\ek$@\e\\"
+        }
+        ;;
+    *)
+        function xtitle () {
+        }
 esac
+
+function precmd () {
+    xtitle "$(print -P $HOST: zsh '(%~)')"
+}
+ function preexec () {
+    xtitle "Running $1"
+}
