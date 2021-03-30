@@ -6,7 +6,7 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/retr0/.zshrc'
+zstyle :compinstall filename '/home/admin/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -90,6 +90,11 @@ mkd(){
 # End mkdir-cd.fish
 ### EO razzius/fish-functions ###
 
+# add pip to PATH
+export PATH=/home/admin/.local/bin:$PATH
+# EO add pip to PATH
+
+# dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
         function xtitle () {
@@ -112,3 +117,4 @@ function precmd () {
  function preexec () {
     xtitle "Running $1"
 }
+# EO dynamic window titles
