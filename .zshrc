@@ -44,7 +44,7 @@ alias gs='git status'
 alias ga='git add'
 alias gp='git push origin master'
 alias ytd='youtube-dl'
-alias yp='youtube-dl --extract-audio --audio-format mp3'
+alias yp='sudo youtube-dl --extract-audio --audio-format mp3'
 ENN="(xinput | grep Synaptics | grep -oP "id=\K..")"
 alias curd='xinput disable $ENN'
 alias cure='xinput enable $ENN'
