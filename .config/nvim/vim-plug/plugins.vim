@@ -8,25 +8,18 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'sheerun/vim-polyglot'
-    Plug 'scrooloose/NERDTree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
-    Plug 'jistr/vim-nerdtree-tabs'
     Plug 'dense-analysis/ale'
     Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-surround'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
     Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
-    Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-    Plug 'p00f/nvim-ts-rainbow'
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
