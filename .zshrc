@@ -68,6 +68,9 @@ source /home/admin/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ./.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # EO zsh-fast-syntax-highlighting
 
+# source /etc/profile for fastboot and adb to work
+source /etc/profile
+# EO source
 # insulter
 if [ -f ~/.zsh/zsh-insulter/src/zsh.command-not-found ]; then
     . ~/.zsh/zsh-insulter/src/zsh.command-not-found
