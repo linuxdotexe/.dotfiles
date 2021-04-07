@@ -50,6 +50,7 @@ alias curd='xinput disable $ENN'
 alias cure='xinput enable $ENN'
 alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
 alias fd='fd -I'
+alias netc='ping -c 3 linode.com'
 # EO aliases
 
 # exports
