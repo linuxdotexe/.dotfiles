@@ -18,7 +18,7 @@ eval "$(starship init zsh)"
 
 # aliases - start
 alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
-alias f='clear'
+alias f='xdotool key ctrl+l'
 alias q='exit'
 alias py='python3'
 alias maxbr='xrandr --output eDP-1 --brightness 2'
