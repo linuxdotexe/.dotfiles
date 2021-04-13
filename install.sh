@@ -14,10 +14,6 @@ cd yay/
 makepkg -si
 echo '#3 Installing previously used AUR apps'
 yay -S android-sdk-platform-tools brave-bin cli-visualizer gotop gruvbox-dark-icons-gtk gruvbox-material-gtk-theme-git i3lock-color moc-pulse neovim-nightly-bin pfetch timeshift-bin tty-clock vimix-cursors webtorrent-desktop-bin
-echo 'Cloning into sainivasmangu/dotfiles'
-git clone https://github.com/sainivasmangu/dotfiles.git
-echo 'changing directory into the cloned repository'
-cd dotfiles
 echo 'Placing .moc folder in home directory'
 mv .moc ~/
 echo 'Placing .zsh in the home directory'
