@@ -7,7 +7,7 @@ echo 'Installing the starship prompt'
 curl -fsSL https://starship.rs/install.sh | bash
 echo 'Installing dependencies'
 echo '#1 Installing previously used apps'
-sudo pacman -S acpi alacritty amfora awesome bat birdtray discord exa fd flameshot linux-headers lxappearance mtpfs nano networkmanager-runit npm nvidia p7zip pamixer pavucontrol pcmanfm-gtk3 playerctl powerline-fonts ranger rofi subversion telegram-desktop thunderbird tmux ttf-roboto vlc xdotool xfce4-power-manager zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+sudo pacman -S acpi alacritty amfora awesome bat birdtray discord exa fd flameshot linux-headers lxappearance mtpfs nano networkmanager network-manager-applet npm nvidia p7zip pamixer pavucontrol pcmanfm-gtk3 playerctl powerline-fonts ranger rofi subversion telegram-desktop thunderbird tmux ttf-roboto vlc xdotool xfce4-power-manager zathura zathura-pdf-poppler zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
 echo '#2 Installing yay'
 git clone https://aur.archlinux.org/yay.git
 cd yay/
