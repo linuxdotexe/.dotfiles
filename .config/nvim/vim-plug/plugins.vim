@@ -7,7 +7,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    Plug 'sheerun/vim-polyglot'
     Plug 'jiangmiao/auto-pairs'
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
@@ -19,7 +18,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dense-analysis/ale'
     Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-fugitive'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
     Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()

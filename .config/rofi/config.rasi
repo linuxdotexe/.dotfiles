@@ -1,5 +1,5 @@
 configuration {
-	theme: "~/.config/rofi/retr0-dmenu.rasi";
+	theme: "~/.config/rofi/theme.rasi";
     display-run: "run";
     display-drun: "app";
     display-window: "wnd";

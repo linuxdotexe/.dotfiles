@@ -6,7 +6,7 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/admin/.zshrc'
+zstyle :compinstall filename '/home/sainivas/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -65,8 +65,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # EO zsh-autocompletions
 
 # zsh-fast-syntax-highlighting
-source /home/admin/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ./.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # EO zsh-fast-syntax-highlighting
 
 # source /etc/profile for fastboot and adb to work
@@ -95,11 +95,11 @@ mkd(){
 ### EO razzius/fish-functions ###
 
 # add pip to PATH
-export PATH=/home/admin/.local/bin:$PATH
+export PATH=/home/sainivas/.local/bin:$PATH
 # EO add pip to PATH
 
 # add gem files location to path
-export PATH=/home/admin/.local/share/gem/ruby/2.7.0/bin:$PATH
+export PATH=/home/sainivas/.local/share/gem/ruby/2.7.0/bin:$PATH
 # dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
