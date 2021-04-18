@@ -69,3 +69,4 @@ screenshots/
 .config/inkscape
 .config/coc/
 .pylint.d/
+.vim/
