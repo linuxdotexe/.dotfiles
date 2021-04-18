@@ -139,3 +139,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Add files to .gitignore with one command
+function omit () {
+    echo $1 >> .gitignore
+}
+# EO omit()
