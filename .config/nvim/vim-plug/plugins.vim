@@ -7,16 +7,15 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    Plug 'sheerun/vim-polyglot'
+" Useful
     Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch' : 'release'}
     Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
+    Plug 'airblade/vim-gitgutter'
+" Looks cool
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
-    Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
-    Plug 'dense-analysis/ale'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
+    Plug 'mhinz/vim-startify'
 
 call plug#end()

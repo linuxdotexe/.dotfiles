@@ -67,3 +67,5 @@ screenshots/
 .yarnrc
 .config/gedit
 .config/inkscape
+.config/coc/
+.pylint.d/
