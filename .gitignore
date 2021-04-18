@@ -1,5 +1,5 @@
 .Xauthority
-.anaconda/
+anaconda3/
 .bash_history
 .bash_logout
 .bash_profile
@@ -61,3 +61,9 @@ stringpy1.png
 stringpy2.png
 techskillsexam/
 screenshots/
+.config/configstore
+.config/dconf
+.config/stacer
+.yarnrc
+.config/gedit
+.config/inkscape
