@@ -17,8 +17,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
     Plug 'mhinz/vim-startify'
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/popup.nvim'  " telescope.nvim dependency
+    Plug 'nvim-lua/plenary.nvim'    " telescope.nvim dependency
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'junegunn/limelight.vim'
 
 call plug#end()
