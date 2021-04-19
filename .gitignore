@@ -54,6 +54,7 @@ anaconda3/
 .pylint.d/
 .vim/
 .anydesk/
+.gitconfig
 
 Downloads/
 movies/
