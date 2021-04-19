@@ -51,6 +51,7 @@ alias cure='xinput enable $ENN'
 alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
 alias fd='fd -I'
 alias netc='ping -c 3 linode.com'
+alias a='startx'
 # EO aliases
 
 # exports
