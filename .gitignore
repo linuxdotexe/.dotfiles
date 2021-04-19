@@ -44,7 +44,7 @@ anaconda3/
 .android/
 .thunderbird/
 .config/birdtray-config.json
-..config/configstore
+.config/configstore
 .config/dconf
 .config/stacer
 .yarnrc
@@ -52,7 +52,8 @@ anaconda3/
 .config/inkscape
 .config/coc/
 .pylint.d/
-.vim/anydesk/
+.vim/
+.anydesk/
 
 Downloads/
 movies/
