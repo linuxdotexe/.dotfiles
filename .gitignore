@@ -55,6 +55,7 @@ anaconda3/
 .vim/
 .anydesk/
 .gitconfig
+.yarn/
 
 Downloads/
 movies/
@@ -71,3 +72,5 @@ stringpy1.png
 stringpy2.png
 techskillsexam/
 screenshots/
+ignored/
+yarn.lock
