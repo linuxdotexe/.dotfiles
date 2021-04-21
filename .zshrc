@@ -100,7 +100,7 @@ export PATH=/home/sainivas/.local/bin:$PATH
 # EO add pip to PATH
 
 # add gem files location to path
-export PATH=/home/sainivas/.local/share/gem/ruby/2.7.0/bin:$PATH
+export PATH=/home/sainivas/.local/share/gem/ruby/3.0.0/bin:$PATH
 # dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
