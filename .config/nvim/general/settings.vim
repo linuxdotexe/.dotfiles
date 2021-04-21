@@ -35,18 +35,38 @@ set fileformat=unix
 set encoding=utf-8
 set fileencoding=utf-8
 
-let NERDTreeMinimalUI = 1
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " Return to last edit position when opening files
-
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
 " End of remember last position function
+
 " You can't stop me
 cmap w!! w !sudo tee %
+" Disables COC for markdown
 autocmd BufEnter *.md execute "CocDisable"
+
+" Opens telescope when opened in a directory
+lua << EOF
+_G.open_telescope = function()
+    local first_arg = vim.v.argv[2]
+    if first_arg and vim.fn.isdirectory(first_arg) == 1 then
+        vim.g.loaded_netrw = true
+        require("telescope.builtin").find_files({search_dirs = {first_arg}})
+    end
+end
+
+vim.api.nvim_exec([[
+augroup TelescopeOnEnter
+    autocmd!
+    autocmd VimEnter * lua open_telescope()
+augroup END
+]], false)
+EOF
+
+" Enable Rooter on default
+autocmd VimEnter * Rooter

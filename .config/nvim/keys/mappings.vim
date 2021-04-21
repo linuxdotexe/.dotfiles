@@ -28,4 +28,3 @@ nnoremap <C-l> <C-w>l
 " Telescope keybindings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-

@@ -13,15 +13,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
     Plug 'airblade/vim-gitgutter'
-    "Plug 'mhinz/vim-startify'
+    Plug 'airblade/vim-rooter'
     Plug 'glepnir/dashboard-nvim'
     Plug 'tpope/vim-surround'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
     " Looks cool
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
-    Plug 'nvim-lua/popup.nvim'  " telescope.nvim dependency
-    Plug 'nvim-lua/plenary.nvim'    " telescope.nvim dependency
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'junegunn/limelight.vim'
 
 call plug#end()

@@ -1,14 +1,23 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "graphql", "html", "yaml",  "json", "python"],
-  "prettier.tabWidth": 4,
-  // python config
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "javascript",
+        "graphql",
+        "html",
+        "yaml",
+        "json",
+        "python",
+        "rust",
+        "vim",
+        "lua"
+    ],
+    "prettier.tabWidth": 4,
+    // python config
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
 
-  "snippets.ultisnips.directories":
-  [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ]
-
+    "snippets.ultisnips.directories": [
+        "UltiSnips",
+        "~/.config/nvim/utils/snips"
+    ]
 }
