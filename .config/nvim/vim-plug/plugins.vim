@@ -23,5 +23,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Looks cool
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
+    Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
