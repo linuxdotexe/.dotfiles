@@ -52,6 +52,7 @@ alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
 alias fd='fd -I'
 alias netc='ping -c 3 linode.com'
 alias a='startx'
+alias upgrade='sudo pacman -Syu'
 # EO aliases
 
 # exports
