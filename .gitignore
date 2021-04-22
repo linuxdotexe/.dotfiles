@@ -76,3 +76,4 @@ ignored/
 yarn.lock
 hdd/sainivasmangu.ml
 hdd/blog
+.config/GIMP
