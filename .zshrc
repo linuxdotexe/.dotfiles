@@ -146,3 +146,9 @@ function omit () {
     echo $1 >> .gitignore
 }
 # EO omit()
+
+# Function for lowdown
+function con () {
+    lowdown $1 > "$1".html
+}
+# EO con
