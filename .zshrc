@@ -53,7 +53,7 @@ alias fd='fd -I'
 alias netc='ping -c 3 linode.com'
 alias a='startx'
 alias upgrade='sudo pacman -Syu'
-alias web='cd ~/hdd/sainivasmangu.ml'
+alias web='cd ~/hdd/fosse.ml'
 # EO aliases
 
 # exports
