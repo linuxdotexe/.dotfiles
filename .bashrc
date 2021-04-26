@@ -7,42 +7,49 @@
 alias ls='ls --color=auto'
 PS1="\[\033[34;1m\][\W]\[\033[m\]\$ "
 
-# Bash Insulter
-
-if [ -f /etc/bash.command-not-found ]; then
-    . /etc/bash.command-not-found
-fi
-
-cd ~/
-alias f='clear'
-alias neofetch='neofetch --source ~/.ascu.txt'
+alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
+alias f='xdotool key ctrl+l'
 alias q='exit'
 alias py='python3'
 alias maxbr='xrandr --output eDP-1 --brightness 2'
 alias nicebr='xrandr --output eDP-1 --brightness 1.25'
 alias minbr='xrandr --output eDP-1 --brightness 1'
+alias cl='tty-clock -c -t -C4 -D'
 alias min='xdotool search Terminal windowminimize'
 alias minf='xdotool search Terminal windowminimize && f'
 alias i='sudo pacman -S'
-alias r='sudo pacman -R'
 alias iy='yay -S'
 alias ry='yay -R'
-alias search='sudo pacman -Ss'
-alias lock='minf && i3lock -i ~/Downloads/lockwalp.png -u'
+alias r='sudo pacman -R'
+alias se='pacman -Ss'
+alias sy='yay -Ss'
+alias lock='minf && i3lock -i ~/Downloads/lockwalp.png -O 0 -R 1500'
 alias vim='nvim'
+alias ls='exa -l -h'
+alias lst='exa -T'
+alias la='exa -la'
+alias ..='cd ..'
+alias gc='git commit'
+alias gs='git status'
+alias ga='git add'
+alias gp='git push origin master'
+alias ytd='youtube-dl'
+alias yp='sudo youtube-dl --extract-audio --audio-format mp3'
+ENN="(xinput | grep Synaptics | grep -oP "id=\K..")"
+alias curd='xinput disable $ENN'
+alias cure='xinput enable $ENN'
+alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
+alias fd='fd -H -I -u'
+alias netc='ping -c 3 linode.com'
+alias a='startx'
+alias upgrade='sudo pacman -Syu'
+alias web='cd ~/hdd/fosse.ml'
+# EO aliases
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/retr0/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/retr0/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/retr0/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/retr0/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-source "$HOME/.cargo/env"
+# Add files to .gitignore with one command
+function omit () {
+    echo $1 >> .gitignore
+}
+# EO omit()
+
+

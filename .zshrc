@@ -49,7 +49,7 @@ ENN="(xinput | grep Synaptics | grep -oP "id=\K..")"
 alias curd='xinput disable $ENN'
 alias cure='xinput enable $ENN'
 alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
-alias fd='fd -I'
+alias fd='sudo fd -H -I -u'
 alias netc='ping -c 3 linode.com'
 alias a='startx'
 alias upgrade='sudo pacman -Syu'
@@ -62,15 +62,6 @@ export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERM=xterm
 # EO exports
-
-# zsh-autocompletions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# EO zsh-autocompletions
-
-# zsh-fast-syntax-highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# EO zsh-fast-syntax-highlighting
 
 # source /etc/profile for fastboot and adb to work
 source /etc/profile
@@ -127,29 +118,9 @@ function precmd () {
     xtitle "Running $1"
 }
 # EO dynamic window titles
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/sainivas/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/sainivas/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/sainivas/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/sainivas/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # Add files to .gitignore with one command
 function omit () {
     echo $1 >> .gitignore
 }
 # EO omit()
-
-# Function for lowdown
-function con () {
-    lowdown $1 > "$1".html
-}
-# EO con
