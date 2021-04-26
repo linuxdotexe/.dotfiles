@@ -14,7 +14,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
     Plug 'airblade/vim-gitgutter'
     Plug 'airblade/vim-rooter'
-    Plug 'glepnir/dashboard-nvim'
     Plug 'tpope/vim-surround'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'

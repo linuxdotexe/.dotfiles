@@ -5,4 +5,3 @@ source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/themes/airline.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 source $HOME/.config/nvim/plug-config/coc.vim
-luafile $HOME/.config/nvim/lua/dashboard.lua
