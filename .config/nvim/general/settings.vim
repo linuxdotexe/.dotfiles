@@ -67,6 +67,3 @@ augroup TelescopeOnEnter
 augroup END
 ]], false)
 EOF
-
-" Enable Rooter on default
-autocmd VimEnter * Rooter
