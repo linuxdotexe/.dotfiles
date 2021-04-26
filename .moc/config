@@ -219,7 +219,7 @@ AutoNext = yes
 #
 # Example:    Theme = laras_theme
 #
-Theme = "/home/admin/.moc/themes/theme"
+Theme = "/home/sainivas/.moc/themes/theme"
 
 # The theme used when running on an xterm.
 #
