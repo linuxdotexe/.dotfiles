@@ -80,3 +80,4 @@ hdd/blog
 hdd/sainivasmangu.ml
 .librewolf/
 .config/nvim
+.config/ranger/__pycache__
