@@ -81,3 +81,4 @@ hdd/sainivasmangu.ml
 .librewolf/
 .config/nvim
 .config/ranger/__pycache__
+.ssh
