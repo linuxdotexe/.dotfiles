@@ -63,6 +63,7 @@ export EDITOR=nvim
 export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERM=xterm
+export TERMINAL=alacritty
 # EO exports
 
 # source /etc/profile for fastboot and adb to work
