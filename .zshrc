@@ -53,8 +53,8 @@ alias netc='ping -c 3 linode.com'
 alias a='startx'
 alias upgrade='sudo pacman -Syu'
 alias web='cd ~/hdd/fosse.ml'
-alias vimrc='cd ~/.config/nvim/;exa -l -h'
-alias wmrc='cd ~/.config/awesome/;exa -l -h'
+alias vimrc='cd ~/.config/nvim/'
+alias wmrc='cd ~/.config/awesome/'
 alias shellrc='nvim ~/.zshrc'
 # EO aliases
 
