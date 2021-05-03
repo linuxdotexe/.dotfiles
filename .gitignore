@@ -82,3 +82,4 @@ hdd/sainivasmangu.ml
 .config/nvim
 .config/ranger/__pycache__
 .ssh
+.config/balena-etcher
