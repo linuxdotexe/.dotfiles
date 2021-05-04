@@ -56,6 +56,7 @@ alias web='cd ~/hdd/fosse.ml'
 alias vimrc='cd ~/.config/nvim/'
 alias wmrc='cd ~/.config/awesome/'
 alias shellrc='nvim ~/.zshrc'
+alias zathura='z'
 # EO aliases
 
 # exports
