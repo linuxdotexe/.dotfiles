@@ -19,9 +19,10 @@ eval "$(starship init zsh)"
 # print some movie quotes
 psmq
 # EO psmq
+
 # aliases - start
 alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
-alias f='xdotool key ctrl+l'
+alias f='clear && psmq'
 alias q='exit'
 alias py='python3'
 alias maxbr='xrandr --output eDP-1 --brightness 2'
