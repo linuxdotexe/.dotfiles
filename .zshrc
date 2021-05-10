@@ -17,7 +17,7 @@ eval "$(starship init zsh)"
 # EO starfish prompt setup
 
 # print some movie quotes
-psmq
+~/.local/bin/psmq/psmq
 # EO psmq
 
 # aliases - start
