@@ -16,6 +16,9 @@ compinit
 eval "$(starship init zsh)"
 # EO starfish prompt setup
 
+# print some movie quotes
+psmq
+# EO psmq
 # aliases - start
 alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
 alias f='xdotool key ctrl+l'
