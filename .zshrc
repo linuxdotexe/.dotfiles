@@ -102,6 +102,8 @@ mkd(){
 export PATH=/home/sainivas/.local/bin:$PATH
 # EO add pip to PATH
 
+# add psmq to PATH
+export PATH=/home/sainivas/.local/bin/psmq:$PATH
 # add gem files location to path
 export PATH=/home/sainivas/.local/share/gem/ruby/3.0.0/bin:$PATH
 # dynamic window titles (help from reddit)
