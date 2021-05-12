@@ -90,3 +90,4 @@ hdd/homepage
 hdd/programs
 .config/obs-studio
 hdd/profile
+.config/autostart
