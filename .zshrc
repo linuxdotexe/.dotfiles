@@ -6,7 +6,7 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/sainivas/.zshrc'
+zstyle :compinstall filename '/home/sterling/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -99,13 +99,13 @@ mkd(){
 ### EO razzius/fish-functions ###
 
 # add pip to PATH
-export PATH=/home/sainivas/.local/bin:$PATH
+export PATH=/home/sterling/.local/bin:$PATH
 # EO add pip to PATH
 
 # add psmq to PATH
-export PATH=/home/sainivas/.local/bin/psmq:$PATH
+export PATH=/home/sterling/.local/bin/psmq:$PATH
 # add gem files location to path
-export PATH=/home/sainivas/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=/home/sterling/.local/share/gem/ruby/3.0.0/bin:$PATH
 # dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
