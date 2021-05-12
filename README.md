@@ -19,3 +19,20 @@ makepkg -si
 yay -S android-sdk-platform-tools brave-bin cli-visualizer gotop gruvbox-dark-icons-gtk gruvbox-material-gtk-theme-git i3lock-color librewolf-bin moc-pulse neovim-nightly-bin pfetch timeshift-bin tty-clock vimix-cursors
 ```
 
+### Enable tap to click
+edit or create file ```/etc/X11/xorg.conf.d/30-touchpad.conf``` and paste this there
+```
+Section "InputClass" 
+
+        Identifier "touchpad" 
+
+        Driver "libinput" 
+
+        MatchIsTouchpad "on" 
+
+        Option "Tapping" "on" 
+
+        Option "TappingButtonMap" "lmr" 
+
+EndSection
+```
