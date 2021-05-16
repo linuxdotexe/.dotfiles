@@ -107,6 +107,10 @@ export PATH=/home/sterling/.local/bin/psmq:$PATH
 # add gem files location to path
 export PATH=/home/sterling/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=/home/sterling/go/bin:$PATH
+# golang
+export GOPATH=$HOME/go/
+export PATH=$PATH:$GOPATH/bin
+export GOPATH=$GOPATH:$HOME/hdd/code
 # dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
