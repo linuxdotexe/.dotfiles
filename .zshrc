@@ -110,7 +110,7 @@ export PATH=/home/sterling/go/bin:$PATH
 # golang
 export GOPATH=$HOME/go/
 export PATH=$PATH:$GOPATH/bin
-export GOPATH=$GOPATH:$HOME/hdd/code
+export GOPATH=$GOPATH:$HOME/hdd/code/golang
 # dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
