@@ -108,6 +108,8 @@ export PATH=/home/sterling/.local/bin:$PATH
 
 # add psmq to PATH
 export PATH=/home/sterling/.local/bin/psmq:$PATH
+# add baba to PATH
+export PATH=/home/sterling/.local/bin/baba:$PATH
 # add gem files location to path
 export PATH=/home/sterling/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=/home/sterling/go/bin:$PATH
