@@ -42,7 +42,7 @@ scrolling:
 font:
     normal:
         family: BlexMono Nerd Font Mono
-        style: SemiBold
+        style: Regular
     bold:
         family: BlexMono Nerd Font Mono
         style: Bold
