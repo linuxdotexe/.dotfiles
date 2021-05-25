@@ -68,6 +68,7 @@ alias disdie='killall Discord'
 alias gofol='cd ~/hdd/code/golang/src/github.com/sainivasmangu/'
 alias gr='go run'
 alias wiki='cd ~/hdd/wiki/'
+alias netres='sudo systemctl restart NetworkManager.service'
 # EO aliases
 
 # exports
