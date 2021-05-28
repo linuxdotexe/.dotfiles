@@ -93,3 +93,7 @@ hdd/profile
 .config/autostart
 hdd/code/
 vimwiki/
+.vscode-oss
+.nvm
+.npmrc
+.config/VSCodium
