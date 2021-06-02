@@ -97,3 +97,6 @@ vimwiki/
 .nvm
 .npmrc
 .config/VSCodium
+.dmrc
+.xsession-errors
+.xsession-errors.old
