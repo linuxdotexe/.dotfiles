@@ -100,3 +100,7 @@ vimwiki/
 .dmrc
 .xsession-errors
 .xsession-errors.old
+.anaconda/
+.continuum/
+.ipython/
+.jupyter/
