@@ -69,6 +69,7 @@ alias gofol='cd ~/hdd/code/golang/src/github.com/sainivasmangu/'
 alias gr='go run'
 alias wiki='cd ~/vimwiki/'
 alias netres='sudo systemctl restart NetworkManager.service'
+alias inicon='source /home/sterling/anaconda3/bin/activate'
 # EO aliases
 
 # exports
