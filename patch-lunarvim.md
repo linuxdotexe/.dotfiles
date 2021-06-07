@@ -31,8 +31,8 @@ Check currently installed plug-ins and add the following:
 
 These are the currently installed plug-ins.
 
-- [ ] `folke/trouble.nvim`
-- [ ] `kevinhwang91/nvim-bqf`
-- [ ] `terrortylor/nvim-comment`
-- [ ] `JoosepAlviste/nvim-ts-context-commentstring`
-- [ ] `Pocco81/TrueZen.nvim`
+- [x] `folke/trouble.nvim`
+- [x] `kevinhwang91/nvim-bqf`
+- [x] `terrortylor/nvim-comment`
+- [x] `JoosepAlviste/nvim-ts-context-commentstring`
+- [x] `Pocco81/TrueZen.nvim`
