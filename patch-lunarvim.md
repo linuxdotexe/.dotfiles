@@ -25,6 +25,7 @@ Check currently installed plug-ins and add the following:
 - VimWiki
     ```
     use {"vimwiki/vimwiki", opt = true}   
+    require_plugin("vimwiki")
     ```
 
 ## Discover installed plug-ins
