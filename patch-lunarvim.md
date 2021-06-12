@@ -6,7 +6,7 @@ I upgrade to the recent edits which overwrite my changes.
 ## Settings
 
 - Change theme to gruvbox
-  - Navigate to lv-settings.lua
+  - Navigate to `lv-settings.lua`
   - change `O.colorscheme = 'lunar'` to `O.colorscheme = 'gruvbox'`
 - Add the code to remember last cursor position (make a PR for this.)
     - Navigate to vimscript/functions.vim
@@ -17,7 +17,9 @@ I upgrade to the recent edits which overwrite my changes.
         \   exe "normal! g`\"" |
         \ endif
     ```
-
+- Change theme of `galaxyline`
+  - Navigate to `lua/lv-galaxyline/init.lua`
+  - Change the colours to gruvbox colours.
 ## My plug-ins
 
 Check currently installed plug-ins and add the following:
