@@ -67,9 +67,10 @@ alias teldie='killall telegram-desktop'
 alias disdie='killall Discord'
 alias gofol='cd ~/hdd/code/golang/src/github.com/sainivasmangu/'
 alias gr='go run'
-alias wiki='nvim ~/vimwiki/index.wiki'
 alias netres='sudo systemctl restart NetworkManager.service'
 alias inicon='source /home/sterling/anaconda3/bin/activate'
+alias wiki='nvim ~/vimwiki/index.wiki'
+alias jwiki='nvim ~/vimwiki/Java/index.wiki'
 # EO aliases
 
 # exports
