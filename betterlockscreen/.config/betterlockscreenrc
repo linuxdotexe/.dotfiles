@@ -1,0 +1,19 @@
+# configuration file for betterlockscreen
+
+insidecolor=282828
+ringcolor=fbf1c7
+keyhlcolor=d23c3dff
+bshlcolor=d23c3dff
+separatorcolor=282828
+insidevercolor=ebdbb2
+insidewrongcolor=d23c3dff
+ringvercolor=fbf1c7
+ringwrongcolor=fe8019
+verifcolor=98971a
+timecolor=fbf1c7
+datecolor=fbf1c7
+loginbox=282828
+font="BlexMono Nerd Font Mono"
+locktext='Say the words, punk!'
+lock_timeout=5
+time_format='%H:%M:%S'
