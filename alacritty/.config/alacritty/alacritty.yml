@@ -137,7 +137,7 @@ selection:
 # Allow terminal applications to change Alacritty's window title.
 window.dynamic_title: true
 cursor:
-    style: Block
+    style: Beam
     unfocused_hollow: true
 live_config_reload: true
 working_directory: None
