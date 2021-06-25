@@ -7,6 +7,8 @@ all walps here :)
 ![](pacman.jpg)
 ![](rocket.jpg)
 ![](waifu.jpg)
+![](xavier-cuenca-w4-3.jpg)
+Pro-tip: above one looks real good with transparency.
 
 ## I made these in canva :)
 
