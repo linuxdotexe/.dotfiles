@@ -71,6 +71,7 @@ alias netres='sudo systemctl restart NetworkManager.service'
 alias inicon='source /home/sterling/anaconda3/bin/activate'
 alias wiki='nvim ~/vimwiki/index.wiki'
 alias jwiki='nvim ~/vimwiki/Java/index.wiki'
+alias pyf='cd ~/hdd/code/python/fun'
 # EO aliases
 
 # exports
