@@ -49,7 +49,13 @@ return require("packer").startup(function(use)
     use {"mfussenegger/nvim-dap", opt = true}
 
     -- Autocomplete
-    use {"hrsh7th/nvim-compe", opt = true}
+     use {"hrsh7th/nvim-compe",
+        cond = function()
+                    local file_type = vim.fn.expand("%:e")
+                    return file_type ~= "wiki"
+        end,
+        config = function() require("lv-compe") end
+}
     use {"hrsh7th/vim-vsnip", opt = true}
     use {"rafamadriz/friendly-snippets", opt = true}
 
@@ -105,7 +111,6 @@ return require("packer").startup(function(use)
     require_plugin("telescope.nvim")
     require_plugin('telescope-project.nvim')
     require_plugin("nvim-dap")
-    require_plugin("nvim-compe")
     require_plugin("vim-vsnip")
     require_plugin("nvim-treesitter")
     require_plugin("nvim-ts-autotag")
