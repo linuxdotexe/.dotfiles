@@ -4,7 +4,7 @@ local gl = require('galaxyline')
 
 -- galaxyline for gruvbox
 local colors = {
-    bg = '#282828',
+    bg ='#32302F',
     yellow = '#FABD2F',
     dark_yellow = '#D79921',
     cyan = '#8EC07C',
