@@ -83,7 +83,6 @@ awful.spawn.with_shell('xfce4-power-manager')
 awful.spawn.with_shell('lxqt-policykit-agent')
 awful.spawn.with_shell('flameshot')
 awful.spawn.with_shell('pipewire')
-awful.spawn.with_shell('todoist')
 
 hotcorner.create({
         placement = awful.placement.bottom_right,
