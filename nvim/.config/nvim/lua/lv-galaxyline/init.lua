@@ -32,7 +32,7 @@ table.insert(gls.left, {
                 v = colors.orange,
                 [''] = colors.purple,
                 V = colors.string_orange,
-                c = colors.error_red,
+                c = colors.red,
                 no = colors.blue,
                 s = colors.orange,
                 S = colors.orange,

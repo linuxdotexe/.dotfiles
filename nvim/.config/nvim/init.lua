@@ -11,6 +11,7 @@ require('lv-telescope')
 require('lv-treesitter')
 require('lv-autopairs')
 require('lv-which-key')
+require('lv-nvim-lastplace')
 
 -- LSP
 require('lsp')
