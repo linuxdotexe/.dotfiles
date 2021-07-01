@@ -9,6 +9,7 @@ all walps here :)
 ![](waifu.jpg)
 ![](xavier-cuenca-w4-3.jpg)
 Pro-tip: above one looks real good with transparency.
+![](gruv_waifu.png)
 
 ## I made these in canva :)
 
