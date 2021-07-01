@@ -13,7 +13,7 @@ O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 100
 O.document_highlight = true
-O.extras = false
+O.extras = true
 O.leader_key = ' '
 O.ignore_case = true
 O.smart_case = true
@@ -28,7 +28,8 @@ O.plugin.numb.active = false
 O.plugin.ts_playground.active = false
 O.plugin.indent_line.active = false
 O.plugin.gitlinker.active = true
-O.plugin.zen.active = true
+O.plugin.zen.active = false
+O.plugin.markdown_preview.active = true
 
 -- dashboard
 -- O.dashboard.custom_header = {""}
