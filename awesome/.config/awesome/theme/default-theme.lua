@@ -26,7 +26,7 @@ local awesome_overrides =
   walp.dir = os.getenv('HOME') .. '/.config/awesome/walps'
 
   theme.icons = theme.dir .. '/icons/'
-  theme.wallpaper = walp.dir .. '/skull.png'
+  theme.wallpaper = walp.dir .. '/gruv_waifu.png'
   --theme.wallpaper = '#e0e0e0'
   --theme.font = 'Roboto Medium 10'
   theme.font = 'BlexMono Nerd Font Mono 10'
