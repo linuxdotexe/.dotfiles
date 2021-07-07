@@ -56,7 +56,7 @@ alias fd='sudo fd -H -I -u'
 alias netc='ping -c 3 linode.com'
 alias a='startx'
 alias upgrade='sudo pacman -Syu'
-alias web='cd ~/hdd/fosse.ml'
+alias web='cd ~/hdd/code/portfolio/'
 alias vimrc='cd ~/.config/nvim/'
 alias wmrc='cd ~/.config/awesome/'
 alias shellrc='nvim ~/.zshrc'
@@ -80,6 +80,7 @@ export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERM=xterm
 export TERMINAL=alacritty
+export BAT_THEME="gruvbox-dark"
 # EO exports
 
 # source /etc/profile for fastboot and adb to work
