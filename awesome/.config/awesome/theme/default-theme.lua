@@ -26,18 +26,18 @@ local awesome_overrides =
   walp.dir = os.getenv('HOME') .. '/.config/awesome/walps'
 
   theme.icons = theme.dir .. '/icons/'
-  theme.wallpaper = walp.dir .. '/gruv_waifu.png'
+  theme.wallpaper = walp.dir .. '/nord/ign_venom.jpg'
   --theme.wallpaper = '#e0e0e0'
   --theme.font = 'Roboto Medium 10'
   theme.font = 'BlexMono Nerd Font Mono 10'
   --theme.title_font = 'Roboto Medium 14'
   theme.title_font = 'BlexMono Nerd Font Mono 14'
 
-  theme.fg_normal = '#665c54'
+  theme.fg_normal = '#d8dee9'
 
-  theme.fg_focus = '#fbf1c7'
-  theme.fg_urgent = '#fbf1c7'
-  theme.bat_fg_critical = '#32302f'
+  theme.fg_focus = '#e5e9f0'
+  theme.fg_urgent = '#e5e9f0'
+  theme.bat_fg_critical = '#eceff4'
 
   theme.bg_normal = theme.background.hue_800
   theme.bg_focus = '#5a5a5a'
@@ -98,16 +98,16 @@ local awesome_overrides =
         theme.background.hue_800 ..
           ':0.95,' .. theme.background.hue_800 .. ':0.95,' .. theme.fg_normal .. ':1,' .. theme.fg_normal
   theme.tasklist_bg_urgent = theme.primary.hue_800
-  theme.tasklist_fg_focus = '#a89984'
+  theme.tasklist_fg_focus = '#eceff4'
   theme.tasklist_fg_urgent = theme.fg_normal
-  theme.tasklist_fg_normal = '#a89984'
+  theme.tasklist_fg_normal = '#d8dee9'
 
   theme.icon_theme = 'oomox-gruvbox-dark'
 
   --Client
   theme.border_width = dpi(2)
-  theme.border_focus = theme.primary.hue_500
-  theme.border_normal = theme.background.hue_800
+  theme.border_focus = '#4c566a'
+  theme.border_normal = '#2e3440'
 end
 return {
   theme = theme,

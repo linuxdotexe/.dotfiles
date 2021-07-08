@@ -10,15 +10,15 @@ theme.font = 'BlexMono Nerd Font Mono 10'
 
 -- Primary
 theme.primary = mat_colors.teal
-theme.primary.hue_900 = '#282828'
+theme.primary.hue_900 = '#2e3440'
 -- Accent
 theme.accent = mat_colors.red
 
 -- Background
 theme.background = mat_colors.blue_grey
 
-theme.background.hue_800 = '#282828'
-theme.background.hue_900 = '#282828'
+theme.background.hue_800 = '#2e3440'
+theme.background.hue_900 = '#2e3440'
 
 local awesome_overrides = function(theme)
   --
