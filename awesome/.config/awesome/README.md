@@ -2,13 +2,13 @@
 
 Original Work - [PapyElGringo's Material Awesome](https://github.com/material-shell/material-awesome)
 
-![2021-03-18_11-08](https://user-images.githubusercontent.com/74004229/111578600-71fda280-87da-11eb-8530-2b99a36bbfb8.png)
+![nord_ss](https://user-images.githubusercontent.com/74004229/124870564-8ca19480-dfe0-11eb-9e19-8f461c2c1610.png)
 
 ## My changes
 
 -   Changed some icons for the tags.
 -   Removed the WiFi thing 'cause it wasn't working for me.
--   Changed the colour scheme to gruvbox.
+-   Changed the colour scheme to nord.
 -   Changed some shortcuts.
 -   Removed "Search Applications".
 -   Removed full screen switch and left MSTAB tabbing as-is.
