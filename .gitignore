@@ -112,3 +112,5 @@ Android
 .config/Todoist
 vimwiki_html
 nvcode-color-schemes.vim
+mocp/.moc/last_directory
+mocp/.moc/pid
