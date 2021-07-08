@@ -26,7 +26,7 @@ local awesome_overrides =
   walp.dir = os.getenv('HOME') .. '/.config/awesome/walps'
 
   theme.icons = theme.dir .. '/icons/'
-  theme.wallpaper = walp.dir .. '/nord/ign_venom.jpg'
+  theme.wallpaper = walp.dir .. '/nord/waves.jpg'
   --theme.wallpaper = '#e0e0e0'
   --theme.font = 'Roboto Medium 10'
   theme.font = 'BlexMono Nerd Font Mono 10'
@@ -98,7 +98,7 @@ local awesome_overrides =
         theme.background.hue_800 ..
           ':0.95,' .. theme.background.hue_800 .. ':0.95,' .. theme.fg_normal .. ':1,' .. theme.fg_normal
   theme.tasklist_bg_urgent = theme.primary.hue_800
-  theme.tasklist_fg_focus = '#eceff4'
+  theme.tasklist_fg_focus = '#ECEFF4'
   theme.tasklist_fg_urgent = theme.fg_normal
   theme.tasklist_fg_normal = '#d8dee9'
 
