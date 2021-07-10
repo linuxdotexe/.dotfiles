@@ -84,6 +84,7 @@ awful.spawn.with_shell('lxqt-policykit-agent')
 awful.spawn.with_shell('flameshot')
 awful.spawn.with_shell('pipewire')
 awful.spawn.with_shell('feh --bg-fill --randomize ~/.config/awesome/walps/nord/*')
+awful.spawn.with_shell('picom')
 hotcorner.create({
         placement = awful.placement.bottom_right,
         action = function()
