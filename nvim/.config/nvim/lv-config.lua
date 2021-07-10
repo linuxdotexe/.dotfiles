@@ -8,7 +8,7 @@ an executable
 ]] -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 -- general
 O.auto_complete = true
-O.colorscheme = 'gruvbox'
+O.colorscheme = 'nord'
 O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 100

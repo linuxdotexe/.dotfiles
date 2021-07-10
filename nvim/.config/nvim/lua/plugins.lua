@@ -19,10 +19,6 @@ return require("packer").startup(function(use)
     use {"neovim/nvim-lspconfig"}
     use {"glepnir/lspsaga.nvim", event = "BufRead"}
     use {"kabouzeid/nvim-lspinstall", event = "BufRead"}
-    -- Telescope
-    use {"nvim-lua/popup.nvim"}
-    use {"nvim-lua/plenary.nvim"}
-    use {"nvim-telescope/telescope.nvim"}
 
     -- Autocomplete
     use {
@@ -72,7 +68,7 @@ return require("packer").startup(function(use)
     }
 
     -- Color
-    use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
+    use "shaunsingh/nord.nvim"
 
     -- Icons
     use {"kyazdani42/nvim-web-devicons"}
