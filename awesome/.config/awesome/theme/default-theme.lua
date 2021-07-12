@@ -27,7 +27,7 @@ local awesome_overrides =
 
   theme.icons = theme.dir .. '/icons/'
   -- theme.wallpaper = walp.dir .. '/nord/waves.jpg'
-  --theme.wallpaper = '#e0e0e0'
+  theme.wallpaper = '#2e3440'
   --theme.font = 'Roboto Medium 10'
   theme.font = 'BlexMono Nerd Font Mono 10'
   --theme.title_font = 'Roboto Medium 14'
