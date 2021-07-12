@@ -88,6 +88,6 @@ awful.spawn.with_shell('picom')
 hotcorner.create({
         placement = awful.placement.bottom_right,
         action = function()
-            awful.spawn.with_shell('xinput disable 11')
+            awful.spawn.with_shell('xinput disable 13')
         end
     })
