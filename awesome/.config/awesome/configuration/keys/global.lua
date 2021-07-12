@@ -87,7 +87,7 @@ awful.key(
     {altkey, 'Shift'},
     'e',
     function()
-      awful.spawn.with_shell('xinput enable 11')
+      awful.spawn.with_shell('xinput enable 13')
     end,
     {description = 'enable synaptics touchpad', group = 'touchpad'}
   ),
@@ -95,7 +95,7 @@ awful.key(
     {altkey, 'Shift'},
     'd',
     function()
-      awful.spawn.with_shell('xinput disable 11')
+      awful.spawn.with_shell('xinput disable 13')
     end,
     {description = 'disable synaptics touchpad', group = 'touchpad'}
   ),
