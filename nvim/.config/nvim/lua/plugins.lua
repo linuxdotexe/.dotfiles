@@ -91,9 +91,6 @@ return require("packer").startup(function(use)
 
     }
 
-    -- VimWiki
-    use "vimwiki/vimwiki"
-
     -- nvim-lastplace
     use {"ethanholz/nvim-lastplace", opt = false}
 
