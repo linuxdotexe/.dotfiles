@@ -4,7 +4,6 @@ local theme_dir = filesystem.get_configuration_dir() .. '/theme'
 local gears = require('gears')
 local dpi = require('beautiful').xresources.apply_dpi
 local theme = {}
-local walp = {}
 theme.icons = theme_dir .. '/icons/'
 --theme.font = 'Roboto Medium 10'
 local walp_dir = filesystem.get_configuration_dir() .. '/walps'
@@ -23,7 +22,6 @@ theme.background = mat_colors.grey
 local awesome_overrides =
   function(theme)
   theme.dir = os.getenv('HOME') .. '/.config/awesome/theme'
-  walp.dir = os.getenv('HOME') .. '/.config/awesome/walps'
 
   theme.icons = theme.dir .. '/icons/'
   -- theme.wallpaper = walp.dir .. '/nord/waves.jpg'
