@@ -3,7 +3,7 @@ require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
 
-local shell = require("widgetsFromGitHub.awesome-wm-widgets.shell.shell")
+local shell = require("widget.streetturtle.shell.shell")
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
@@ -53,7 +53,7 @@ local globalKeys =
     {modkey},
     'e',
     function()
-      awful.spawn(apps.default.lock)
+      awful.spawn.with_shell('betterlockscreen --lock')
     end
   ),
   awful.key(
