@@ -9,21 +9,23 @@ local mat_icon = require('widget.material.icon')
 local TagList = require('widget.tag-list')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('theme.icons')
+local volume_widget = require('widget.volume.volume')
+local mute_widget = require('widget.volume.mute')
+local seperator = require('widget.spaceWid.spaceWid')
 
 -- Clock / Calendar 12AM/PM fornat
-local textclock = wibox.widget.textclock('<span font="BlexMono Nerd Font Mono 10">%I:%M %p</span>')
+local textclock = wibox.widget.textclock('<span color="#EBCB8B" font="BlexMono Nerd Font Mono SemiBold Italic 10">%I:%M %p</span>')
 textclock.forced_height = 10
 
 local clock_widget = wibox.container.margin(textclock, dpi(9), dpi(9), dpi(9), dpi(8))
 -- Add a calendar (credits to kylekewley for the original code)
 local month_calendar = awful.widget.calendar_popup.month({
-  start_sunday = false,
-  week_numbers = true
+    start_sunday = false,
+    week_numbers = true
 })
 month_calendar:attach(textclock)
 local systray = wibox.widget.systray()
 systray:set_horizontal(true)
-systray:set_base_size(24)
 systray.forced_height = 24
 beautiful.systray_icon_spacing = dpi(7)
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(18)))
@@ -124,8 +126,13 @@ local TopPanel = function(s, offset)
     nil,
     {
       layout = wibox.layout.fixed.horizontal,
-      wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
+      mute_widget,
+      seperator,
+      volume_widget,
+      seperator,
       textclock,
+      seperator,
+      wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
       require('widget.battery'),
     }
   }
