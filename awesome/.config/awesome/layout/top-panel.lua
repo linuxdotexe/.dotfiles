@@ -48,6 +48,9 @@ add_button:buttons(
   )
 )
 
+-- imagebox to display an image in the top right corner
+local logo = mat_icon(icons.logo, dpi(18))
+
 -- Create an imagebox widget which will contains an icon indicating which layout we're using.
 -- We need one layoutbox per screen.
 local LayoutBox = function(s)
@@ -120,6 +123,7 @@ local TopPanel = function(s, offset)
       layout = wibox.layout.fixed.horizontal,
       -- Create a taglist widget
       --TagList(s),
+      logo,
       TaskList(s),
       --add_button
     },
