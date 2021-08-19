@@ -12,7 +12,7 @@ local icons = require('theme.icons')
 local volume_widget = require('widget.volume.volume')
 local mute_widget = require('widget.volume.mute')
 local seperator = require('widget.spaceWid.spaceWid')
-
+local numind = require('widget.numind.num')
 -- Clock / Calendar 12AM/PM fornat
 local textclock = wibox.widget.textclock('<span color="#EBCB8B" font="BlexMono Nerd Font Mono SemiBold Italic 10">%I:%M %p</span>')
 textclock.forced_height = 10
@@ -126,6 +126,8 @@ local TopPanel = function(s, offset)
     nil,
     {
       layout = wibox.layout.fixed.horizontal,
+      numind,
+      seperator,
       mute_widget,
       seperator,
       volume_widget,
