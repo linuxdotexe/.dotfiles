@@ -81,7 +81,6 @@ _G.client.connect_signal(
 awful.spawn.with_shell('nm-applet')
 awful.spawn.with_shell('xfce4-power-manager')
 awful.spawn.with_shell('lxqt-policykit-agent')
-awful.spawn.with_shell('flameshot')
 awful.spawn.with_shell('pipewire')
 awful.spawn.with_shell('feh --bg-fill --randomize ~/nordic-wallpapers/wallpapers/*')
 awful.spawn.with_shell('picom')

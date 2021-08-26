@@ -124,6 +124,7 @@ local TopPanel = function(s, offset)
       -- Create a taglist widget
       --TagList(s),
       logo,
+      seperator,
       TaskList(s),
       --add_button
     },

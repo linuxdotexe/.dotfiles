@@ -14,7 +14,7 @@ local space_widget = wibox.widget.background()
 space_widget:set_widget(space_text)
 
 space_widget:set_bg("#2E3440")
-space_widget:set_fg("#88C0D0")
+space_widget:set_fg("#4C566A")
 
 space_text:set_text(" | ")
 return space_widget
