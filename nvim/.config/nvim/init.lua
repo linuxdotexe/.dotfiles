@@ -11,7 +11,7 @@ require('lv-treesitter')
 require('lv-autopairs')
 require('lv-which-key')
 require('lv-nvim-lastplace')
-
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 -- LSP
 require('lsp')
 -- TODO should I put this in the filetype files?
