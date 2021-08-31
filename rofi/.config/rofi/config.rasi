@@ -2,7 +2,5 @@ configuration {
 	theme: "~/.config/rofi/theme.rasi";
     display-run: "run";
     display-drun: "app";
-    display-window: "wnd";
-    display-file-browser: "fbr";
-    modi: "run,drun,window,file-browser";
+    modi: "run,drun";
 }
