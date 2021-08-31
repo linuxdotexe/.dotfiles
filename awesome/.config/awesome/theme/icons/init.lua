@@ -2,7 +2,7 @@ local dir = os.getenv('HOME') .. '/.config/awesome/theme/icons'
 
 return {
   --tags
-  logo = dir .. '/logo.svg',
+  logo = dir .. '/arch.svg',
   --others
   close = dir .. '/close.svg',
   logout = dir .. '/logout.svg',
