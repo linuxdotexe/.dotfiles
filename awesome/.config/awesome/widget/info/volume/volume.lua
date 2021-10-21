@@ -18,16 +18,10 @@ vol_widget:set_fg("#A3BE8C")
 
 watch(
     "pamixer --get-volume", 0.01,
-  --   function(widget, stdout, stderr, exitreason, exitcode)
-  --   vol_text:set_text(stdout)
-  -- end,
     function (_, stdout, stderr, exitreason, exitcode)
         local vol = nil
-        -- for str in string.gmatch(stdout, "([0-9]+.[0-9]+)") do
-        --     vol = tonumber(str)
-        -- end
         vol = stdout
-        vol_text:set_text("Volume %: " .. vol)
+        vol_text:set_text(string.format("%d%%", vol))
     end,
   vol_widget
 )
