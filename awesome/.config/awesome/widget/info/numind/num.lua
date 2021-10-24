@@ -23,7 +23,7 @@ watch(
         if num:match("Num Lock") then
             local fou = num:gsub(".*(Num Lock:%s+)(%a+).*", "%2")
             local fout = string.upper(fou)
-            num_text:set_text("Num Lock: " .. fout)
+            num_text:set_text("Num: " .. fout)
         end
     end,
     num_widget
