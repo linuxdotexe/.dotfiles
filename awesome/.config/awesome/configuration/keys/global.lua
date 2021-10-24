@@ -180,20 +180,12 @@ awful.key(
     {description = 'rofi run', group = 'rofi'}
   ),
   awful.key(
-    {modkey, 'Shift'},
-    'm',
+    {modkey},
+    'b',
     function()
-      awful.spawn.with_shell('bash ~/rofi-scripts/manpages.sh')
+      awful.spawn.with_shell('google-chrome-stable')
     end,
-    {description = 'search rofi man pages', group = 'rofi'}
-  ),
-  awful.key(
-    {modkey, 'Shift'},
-    's',
-    function()
-      awful.spawn.with_shell('bash ~/rofi-scripts/search.sh')
-    end,
-    {description = 'browsing with rofi', group = 'rofi'}
+    {description = 'open browser', group = 'application'}
   ),
   -- ALSA volume control
   awful.key(
