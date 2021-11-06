@@ -78,7 +78,7 @@ export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERM=xterm
 export TERMINAL=alacritty
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Nord"
 # EO exports
 
 # source /etc/profile for fastboot and adb to work
