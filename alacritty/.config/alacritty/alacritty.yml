@@ -3,6 +3,7 @@
 # set by alacritty itself.
 import:
   - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/fonts.yml
 
 env:
     TERM: screen-256color
@@ -41,32 +42,6 @@ scrolling:
     history: 10000
     # Number of lines the viewport will move for every line scrolled when
     multiplier: 1
-# Font configuration (changes require restart)
-font:
-    normal:
-        family: Liberation Mono
-        style: Regular
-    bold:
-        family: Liberation Mono
-        style: Bold
-
-    italic:
-        family: Liberation Mono
-        style: Italic
-    size: 11
-
-    # Offset is the extra space around each character. `offset.y` can be thought of
-    # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-    offset:
-        x: 0
-        y: 0
-
-    # Glyph offset determines the locations of the glyphs within their cells with
-    # the default being at the bottom. Increasing `x` moves the glyph to the right,
-    # increasing `y` moves the glyph upwards.
-    glyph_offset:
-        x: 0
-        y: 0
 
 draw_bold_text_with_bright_colors: true
 
