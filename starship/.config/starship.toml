@@ -8,3 +8,5 @@ error_symbol = "[❯](bold red)"
 disabled = true
 [nodejs]
 disabled = true
+[battery]
+disabled=true
