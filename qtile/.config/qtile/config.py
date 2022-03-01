@@ -47,6 +47,18 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # Open applications
+    Key([mod], "t", lazy.spawn("telegram-desktop"), desc="Spawn Telegram"),
+    Key([mod], "b", lazy.spawn("google-chrome-stable"), desc="Spawn Chrome"),
+    # Minimize focused window - xdotool
+    Key([mod, "control"], "m", lazy.spawn("bash -c 'xdotool windowminimize $(xdotool getactivewindow)'"), desc="Spawn Telegram"),
+    # Volume controls
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5"), desc="Inc volume"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5"), desc="Dec volume"),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Toggle Mute"),
+    # Screen lock
+    Key([mod], "e", lazy.spawn("betterlockscreen --lock blue"), desc="Lock screen"),
+
 ]
 
 groups = [Group(i) for i in "123456789"]
