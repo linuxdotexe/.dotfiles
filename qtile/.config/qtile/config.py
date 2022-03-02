@@ -96,6 +96,8 @@ widget_defaults = dict(
     font="sans",
     fontsize=14,
     padding=4,
+    background="13141f",
+    rounded=False,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -104,22 +106,21 @@ screens = [
         top=bar.Bar(
             [
                 # widget.CurrentLayout(),
-                widget.Image(filename="~/Downloads/img/logo.png", margin=5, background="282a36"),
-                widget.GroupBox(background="282a36", active="f8f8f2", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, rounded=False, highlight_method="block", this_current_screen_border="44475a"),
-                widget.Prompt(background="282a36", foreground="bd93f9"),
-                widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="44475a",background="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("biggus@dickus |", name="default",background="282a36",foreground="6272a4"),
-                widget.CapsNumLockIndicator(background="282a36",foreground="50fa7b"),
-                widget.Battery(format='| {percent:2.0%} |',background="282a36",foreground="8be9fd"),
-                widget.Systray(background="282a36",foreground="8be9fd"),
-                widget.Clock(format="%d %b, %a | %I:%M %p |",background="282a36",foreground="bd93f9"),
-                widget.QuickExit(background="282a36",foreground="ff5555"),
+                widget.Image(filename="~/Downloads/img/logo.png", margin=5),
+                widget.GroupBox(active="f8f8f2", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
+                widget.Prompt(foreground="bd93f9"),
+                widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
+                # widget.Chord(
+                #     chords_colors={
+                #         "launch": ("#ff0000", "#ffffff"),
+                #     },
+                #     name_transform=lambda name: name.upper(),
+                # ),
+                # widget.TextBox("biggus@dickus |", name="default",foreground="6272a4"),
+                # widget.CapsNumLockIndicator(foreground="50fa7b"),
+                widget.Systray(),
+                widget.Clock(format="| %a, %d %b | %I:%M %p |",foreground="bd93f9"),
+                widget.QuickExit(foreground="ff5555"),
             ],
             30,
             # border_width=[0, 0, 0, 0],  # Draw top and bottom borders
