@@ -9,7 +9,7 @@
 
 colors:
   primary:
-    background: '#282a36'
+    background: '#13141f'
     foreground: '#f8f8f2'
     bright_foreground: '#ffffff'
   cursor:
@@ -42,7 +42,7 @@ colors:
     text: CellForeground
     background: '#44475a'
   normal:
-    black: '#21222c'
+    black: '#13141f'
     red: '#ff5555'
     green: '#50fa7b'
     yellow: '#f1fa8c'
