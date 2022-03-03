@@ -3,7 +3,6 @@ from typing import List  # noqa: F401
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = "alacritty"
@@ -12,10 +11,6 @@ keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
-    Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -57,11 +52,12 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5"), desc="Dec volume"),
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Toggle Mute"),
     # Screen lock
-    Key([mod], "e", lazy.spawn("betterlockscreen --lock blue"), desc="Lock screen"),
+    Key([mod], "l", lazy.spawn("betterlockscreen --lock blur"), desc="Lock screen"),
+    Key([mod], "e", lazy.spawn("pcmanfm"), desc="Open file manager"),
 
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "12345"]
 
 for i in groups:
     keys.extend(
@@ -110,21 +106,11 @@ screens = [
                 widget.GroupBox(active="f8f8f2", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
                 widget.Prompt(foreground="bd93f9"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
-                # widget.Chord(
-                #     chords_colors={
-                #         "launch": ("#ff0000", "#ffffff"),
-                #     },
-                #     name_transform=lambda name: name.upper(),
-                # ),
-                # widget.TextBox("biggus@dickus |", name="default",foreground="6272a4"),
-                # widget.CapsNumLockIndicator(foreground="50fa7b"),
                 widget.Systray(),
                 widget.Clock(format="| %a, %d %b | %I:%M %p |",foreground="bd93f9"),
                 widget.QuickExit(foreground="ff5555"),
             ],
             30,
-            # border_width=[0, 0, 0, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),
 ]
@@ -155,7 +141,6 @@ floating_layout = layout.Floating(
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
-reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
