@@ -25,50 +25,29 @@ alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
 alias f='clear && psmq'
 alias q='exit'
 alias py='python3'
-alias maxbr='xrandr --output eDP-1 --brightness 2'
-alias nicebr='xrandr --output eDP-1 --brightness 1.25'
-alias minbr='xrandr --output eDP-1 --brightness 1'
 alias cl='tty-clock -c -t -C4 -D'
-alias min='xdotool search Terminal windowminimize'
-alias minf='xdotool search Terminal windowminimize && f'
 alias i='sudo pacman -S'
 alias iy='yay -S'
 alias ry='yay -R'
 alias r='sudo pacman -R'
 alias se='pacman -Ss'
 alias sy='yay -Ss'
-alias lock='minf && i3lock -i ~/Downloads/lockwalp.png -O 0 -R 1500'
 alias vim='nvim'
 alias ls='exa -l -h'
-alias ll='exa -la'
-alias ..='cd ..'
+alias ll='exa -la -h'
 alias gc='git commit'
 alias gs='git status'
 alias ga='git add'
-alias gp='git push origin master'
-alias ytd='youtube-dl'
-alias yp='sudo youtube-dl --extract-audio --audio-format mp3'
-ENN="(xinput | grep Synaptics | grep -oP "id=\K..")"
-alias curd='xinput disable $ENN'
-alias cure='xinput enable $ENN'
-alias pomo='python3 ~/HDD/programs/pomo/pomo.py'
+alias gp='git push origin'
 alias fd='sudo fd -H -I -u'
-alias netc='ping -c 3 linode.com'
 alias a='startx'
 alias upgrade='sudo pacman -Syu'
-alias web='cd ~/hdd/code/projects/website'
 alias vimrc='cd ~/.config/nvim/'
-alias wmrc='cd ~/.config/awesome/'
+alias wmrc='nvim ~/.config/qtile/config.py'
 alias shellrc='nvim ~/.zshrc'
-alias z='zathura'
-alias bible='zathura ~/hdd/books/linux-bible.pdf'
 alias die='shutdown now'
 alias teldie='killall telegram-desktop && exit'
-alias disdie='killall Discord'
-alias gofol='cd ~/hdd/code/golang/src/github.com/sainivasmangu/'
-alias gr='go run'
 alias netres='sudo systemctl restart NetworkManager.service'
-alias pyf='cd ~/hdd/code/python/fun'
 # EO aliases
 
 # exports
@@ -77,7 +56,7 @@ export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERM=xterm
 export TERMINAL=alacritty
-export BAT_THEME="Nord"
+export BAT_THEME="Dracula"
 # EO exports
 
 # source /etc/profile for fastboot and adb to work
