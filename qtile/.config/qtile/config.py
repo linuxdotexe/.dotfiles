@@ -12,6 +12,8 @@ keys = [
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
     Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "d", lazy.screen.next_group(), desc="Move to next group"),
+    Key([mod], "a", lazy.screen.prev_group(), desc="Move to prev group"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -56,35 +58,22 @@ keys = [
     Key([mod], "e", lazy.spawn("pcmanfm"), desc="Open file manager"),
 
 ]
-
 groups = [Group(i) for i in "12345"]
 
 for i in groups:
     keys.extend(
         [
-            # mod1 + letter of group = switch to group
-            Key(
-                [mod],
-                i.name,
-                lazy.group[i.name].toscreen(),
-                desc="Switch to group {}".format(i.name),
-            ),
-            # mod1 + shift + letter of group = switch to & move focused window to group
             Key(
                 [mod, "shift"],
                 i.name,
                 lazy.window.togroup(i.name, switch_group=True),
                 desc="Switch to & move focused window to group {}".format(i.name),
             ),
-            # Or, use below if you prefer not to switch to that group.
-            # # mod1 + shift + letter of group = move focused window to group
-            # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-            #     desc="move focused window to group {}".format(i.name)),
         ]
     )
 
 layouts = [
-    layout.Columns(margin=4, border_width=2, border_focus="#44475a", border_normal="#282a36", border_on_single=True),
+    layout.Columns(margin=4, border_width=2, border_focus="#44475a", border_normal="#13141f", border_on_single=True),
     layout.Max(),
 ]
 
@@ -101,25 +90,19 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.CurrentLayout(),
                 widget.Image(filename="~/Downloads/img/logo.png", margin=5),
-                widget.GroupBox(active="f8f8f2", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
-                widget.Prompt(foreground="bd93f9"),
+                widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
+                widget.Prompt(foreground="13141f", background="FF79C6"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
-                widget.Systray(),
-                widget.Clock(format="| %a, %d %b | %I:%M %p |",foreground="bd93f9"),
-                widget.QuickExit(foreground="ff5555"),
+                widget.Battery(foreground="13141f",background="FFB86C",low_background="FF5555",low_foreground="13141f",low_percentage=0.2,format="{percent:2.0%}"),
+                widget.Volume(background="FF79C6",foreground="13141f"),
+                widget.Clock(format="%I:%M %p",foreground="13141f", background="BD93F9"),
+                widget.Systray(background="282A36"),
+                widget.Sep(foreground="282a36",background="282a36", padding=5),
             ],
             30,
         ),
     ),
-]
-
-# Drag floating layouts.
-mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
 dgroups_key_binder = None
@@ -145,13 +128,3 @@ focus_on_window_activation = "smart"
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = True
-
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
-wmname = "LG3D"
