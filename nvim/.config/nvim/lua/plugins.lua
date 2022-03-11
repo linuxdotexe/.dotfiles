@@ -8,16 +8,6 @@ return require('packer').startup(function()
   use 'folke/lsp-colors.nvim'
   use 'anott03/nvim-lspinstall'
 
-  -- TODO: set this up as default
-  -- highlights current scope
-  use {
-    'folke/twilight.nvim',
-    config = function()
-      require('twilight').setup {
-      }
-    end
-    }
-
   -- terminal inside nvim
   use 'akinsho/toggleterm.nvim'
 
