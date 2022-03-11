@@ -1,12 +1,20 @@
 add_newline = false
+
 [line_break]
 disabled = true
+
 [character]
 success_symbol = "[❯](bold blue)"
 error_symbol = "[❯](bold red)"
+
 [package]
 disabled = true
+
 [nodejs]
 disabled = true
+
 [battery]
 disabled=true
+
+[directory]
+truncation_length = 1
