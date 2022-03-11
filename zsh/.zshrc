@@ -48,6 +48,7 @@ alias shellrc='nvim ~/.zshrc'
 alias die='shutdown now'
 alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
+alias oc='code .;exit'
 # EO aliases
 
 # exports
