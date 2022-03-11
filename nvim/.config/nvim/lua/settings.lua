@@ -19,9 +19,17 @@ local settings = {
 for k, v in pairs(settings) do
   vim.o[k] = v
 end
-
+-- tokyonight color scheme settings
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_italic_keywords = true
 
 vim.cmd[[colorscheme tokyonight]]
+
+-- TODO: bring back my nice beam cursor on the terminal
+vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:ver90')
+
+-- PERF: preserve cursor position
+vim.cmd[[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
+
+-- TODO: autocmd

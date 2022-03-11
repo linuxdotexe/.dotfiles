@@ -12,6 +12,9 @@ local colors = {
   blue = '#44475A',
   red = '#FF5555',
 }
+
+local gps = require("nvim-gps")
+
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
@@ -35,11 +38,6 @@ gls.left[1] = {
   },
 }
 gls.left[2] = {
-}
-gls.left[3] = {
-}
-gls.left[4] = {}
-gls.left[5] ={
   FileIcon = {
     provider = 'FileIcon',
     condition = condition.buffer_not_empty,
@@ -48,13 +46,25 @@ gls.left[5] ={
     highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,colors.bg},
   },
 }
-gls.left[6] = {
+gls.left[3] = {
   FileName = {
     provider = 'FileName',
     condition = condition.buffer_not_empty,
     highlight = {colors.magenta,colors.bg,'bold'}
   }
 }
+gls.left[4] = {
+  nvimGPS = {
+    provider = function()
+      return gps.get_location()
+    end,
+    condition = function()
+      return gps.is_available()
+    end
+  }
+}
+gls.left[5] ={}
+gls.left[6] = {}
 gls.left[7] = {}
 gls.left[8] = {}
 gls.left[9] = {}
@@ -66,7 +76,7 @@ gls.mid[1] = {
 
 gls.right[1] = {
   GitIcon = {
-    provider = function() return '  ' end,
+    provider = function() return '  ' end,
     condition = condition.check_git_workspace,
     separator = '',
     separator_highlight = {'NONE',colors.bg},
