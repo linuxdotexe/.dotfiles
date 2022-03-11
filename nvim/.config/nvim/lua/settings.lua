@@ -1,3 +1,5 @@
+local au = require("au")
+
 local settings = {
   undofile = true,
   cmdheight = 1,
@@ -26,10 +28,11 @@ vim.g.tokyonight_italic_keywords = true
 
 vim.cmd[[colorscheme tokyonight]]
 
--- TODO: bring back my nice beam cursor on the terminal
+-- PERF: bring back my nice beam cursor on the terminal
 vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:ver90')
 
 -- PERF: preserve cursor position
 vim.cmd[[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
 
 -- TODO: autocmd
+au.BufEnter = {"*", "ColorizerAttachToBuffer"}
