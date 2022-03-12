@@ -5,7 +5,7 @@ disabled = true
 
 [character]
 success_symbol = "[❯](bold blue)"
-error_symbol = "[❯](bold red)"
+error_symbol = "[✖](bold red)"
 
 [package]
 disabled = true
@@ -14,7 +14,7 @@ disabled = true
 disabled = true
 
 [battery]
-disabled=true
+disabled = true
 
 [directory]
 truncation_length = 1
