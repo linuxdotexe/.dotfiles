@@ -66,4 +66,6 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
 }
   use 'folke/tokyonight.nvim'
+
+  use '~/.config/nvim/myplugins/om.nvim'
 end)
