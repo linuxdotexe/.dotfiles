@@ -14,18 +14,12 @@ keys = [
     Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
     Key([mod], "d", lazy.screen.next_group(), desc="Move to next group"),
     Key([mod], "a", lazy.screen.prev_group(), desc="Move to prev group"),
-    # Move windows between left/right columns or move up/down in current stack.
-    # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod, "shift"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key([mod, "shift"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
+    Key([mod, "shift"], "j", lazy.layout.grow_down(), desc="Grow window down"),
+    Key([mod, "shift"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -44,9 +38,6 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    # Open applications
-    Key([mod], "t", lazy.spawn("telegram-desktop"), desc="Spawn Telegram"),
-    Key([mod], "b", lazy.spawn("google-chrome-stable"), desc="Spawn Chrome"),
     # Minimize focused window - xdotool
     Key([mod, "control"], "m", lazy.spawn("bash -c 'xdotool windowminimize $(xdotool getactivewindow)'"), desc="Spawn Telegram"),
     # Volume controls
@@ -55,7 +46,6 @@ keys = [
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Toggle Mute"),
     # Screen lock
     Key([mod], "l", lazy.spawn("betterlockscreen --lock blur"), desc="Lock screen"),
-    Key([mod], "e", lazy.spawn("pcmanfm"), desc="Open file manager"),
 
 ]
 groups = [Group(i) for i in "12345"]
@@ -91,8 +81,8 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(filename="~/Downloads/img/logo.png", margin=5),
-                widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
                 widget.Prompt(foreground="13141f", background="FF79C6"),
+                widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
                 widget.Battery(foreground="13141f",background="FFB86C",low_background="FF5555",low_foreground="13141f",low_percentage=0.2,format="{percent:2.0%}"),
                 widget.Volume(background="FF79C6",foreground="13141f"),
