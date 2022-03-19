@@ -78,6 +78,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        wallpaper='~/Downloads/img/code.png',
         top=bar.Bar(
             [
                 widget.Image(filename="~/Downloads/img/logo.png", margin=5),
@@ -118,3 +119,4 @@ focus_on_window_activation = "smart"
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = True
+
