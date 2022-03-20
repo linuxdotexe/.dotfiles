@@ -4,6 +4,8 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
+import subprocess
+
 mod = "mod4"
 terminal = "alacritty"
 
@@ -76,6 +78,9 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+kernel_info = str(subprocess.check_output("uname -r", shell=True))
+kernel_info = kernel_info[2:-3:]
+
 screens = [
     Screen(
         wallpaper='~/.config/qtile/img/code.png',
@@ -85,6 +90,7 @@ screens = [
                 widget.Prompt(foreground="13141f", background="FF79C6"),
                 widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
+                widget.TextBox(k, foreground="13141f", background="50fa7b"),
                 widget.Battery(foreground="13141f",background="FFB86C",low_background="FF5555",low_foreground="13141f",low_percentage=0.2,format="{percent:2.0%}"),
                 widget.Volume(background="FF79C6",foreground="13141f"),
                 widget.Clock(format="%I:%M %p",foreground="13141f", background="BD93F9"),
@@ -119,4 +125,5 @@ focus_on_window_activation = "smart"
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = True
+
 
