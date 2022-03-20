@@ -45,7 +45,7 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5"), desc="Dec volume"),
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Toggle Mute"),
     # Screen lock
-    Key([mod], "l", lazy.spawn("betterlockscreen --lock blur"), desc="Lock screen"),
+    Key([mod], "l", lazy.spawn("betterlockscreen --lock"), desc="Lock screen"),
 
 ]
 groups = [Group(i) for i in "12345"]
