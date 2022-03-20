@@ -78,10 +78,10 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper='~/Downloads/img/code.png',
+        wallpaper='~/.config/qtile/img/code.png',
         top=bar.Bar(
             [
-                widget.Image(filename="~/Downloads/img/logo.png", margin=5),
+                widget.Image(filename="~/.config/qtile/img/logo.png", margin=5),
                 widget.Prompt(foreground="13141f", background="FF79C6"),
                 widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
