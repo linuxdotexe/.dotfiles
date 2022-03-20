@@ -12,7 +12,7 @@ cp ~/.dotfiles/configs/pacman.conf /etc/pacman.conf
 # install applications
 echo "Installing applications from pacman"
 
-pacman -S acpi alacritty alsa-utils autoconf automake base bat binutils bison cronie dosfstools efibootmgr exa fakeroot fd feh file findutils firefox flameshot flex gawk gcc gedit gettext gimp git grep groff gzip inkscape jack2 libtool lua lxappearance m4 make moc mtools nano neovim net-tools network-manager-applet nodejs noto-fonts-emoji npm nvidia openssh os-prober pamixer patch pcmanfm-gtk3 pipewire pkgconf powerline-fonts pulseaudio pulseaudio-alsa python-dbus-next python-pip python-pycryptodomex python-websockets qbittorrent qtile ripgrep stow sudo telegram-desktop texinfo unzip vlc vocal which xdotool xf86-video-vesa xfce4-power-manager xsel yay-git zsh
+pacman -S - < pkglist.txt
 
 # install yay
 echo "Installing yay"
@@ -22,7 +22,7 @@ cd yay/
 makepkg -si
 
 # install from yay
-yay -S betterlockscreen dracula-gtk-theme google-chrome gotop-bin ly nerd-fonts-ubuntu-mono pfetch-btw playmymusic vimix-cursors visual-studio-code-bin ttf-blex-nerd-font-git
+yay -S betterlockscreen dracula-gtk-theme google-chrome gotop-bin ly pfetch-btw playmymusic vimix-cursors visual-studio-code-bin nerd-fonts-ibm-plex-mono
 
 # enable tap to click
 echo "touchpad configuration editing"
