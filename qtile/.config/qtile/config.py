@@ -90,7 +90,7 @@ screens = [
                 widget.Prompt(foreground="13141f", background="FF79C6"),
                 widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
-                widget.TextBox(k, foreground="13141f", background="50fa7b"),
+                widget.TextBox(kernel_info, foreground="13141f", background="50fa7b"),
                 widget.Battery(foreground="13141f",background="FFB86C",low_background="FF5555",low_foreground="13141f",low_percentage=0.2,format="{percent:2.0%}"),
                 widget.Volume(background="FF79C6",foreground="13141f"),
                 widget.Clock(format="%I:%M %p",foreground="13141f", background="BD93F9"),
