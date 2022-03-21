@@ -1,16 +1,16 @@
 local gl = require('galaxyline')
 local colors = {
-  bg = '#13141f',
-  fg = '#f8f8f2',
-  yellow = '#f1fa8c',
-  cyan = '#8BE9FD',
-  darkblue = '#21222C',
-  green = '#50FA7B',
-  orange = '#FFB86C',
-  violet = '#BD93F9',
-  magenta = '#FF79C6',
-  blue = '#44475A',
-  red = '#FF5555',
+  bg = '#161320',
+  fg = '#d9e0ee',
+  yellow = '#FAE3B0',
+  cyan = '#B5E8E0',
+  darkblue = '#96CDFB',
+  green = '#ABE9B3',
+  orange = '#F8BD96',
+  violet = '#DDB6F2',
+  magenta = '#F2CDCD',
+  blue = '#89DCEB',
+  red = '#F28FAD',
 }
 
 local gps = require("nvim-gps")

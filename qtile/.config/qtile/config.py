@@ -65,7 +65,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(margin=4, border_width=2, border_focus="#44475a", border_normal="#13141f", border_on_single=True),
+    layout.Columns(margin=4, border_width=2, border_focus="#6E6C7E", border_normal="#161320", border_on_single=True),
     layout.Max(),
 ]
 
@@ -73,7 +73,7 @@ widget_defaults = dict(
     font="sans",
     fontsize=14,
     padding=4,
-    background="13141f",
+    background="161320",
     rounded=False,
 )
 extension_defaults = widget_defaults.copy()
@@ -87,15 +87,15 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(filename="~/.config/qtile/img/logo.png", margin=5),
-                widget.Prompt(foreground="13141f", background="FF79C6"),
-                widget.GroupBox(active="bd93f9", inactive="6272a4", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="282a36"),
-                widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="282a36",foreground="f8f8f2",borderwidth=0,highlight_method="block",rounded=False),
-                widget.TextBox(kernel_info, foreground="13141f", background="50fa7b"),
-                widget.Battery(foreground="13141f",background="FFB86C",low_background="FF5555",low_foreground="13141f",low_percentage=0.2,format="{percent:2.0%}"),
-                widget.Volume(background="FF79C6",foreground="13141f"),
-                widget.Clock(format="%I:%M %p",foreground="13141f", background="BD93F9"),
-                widget.Systray(background="282A36"),
-                widget.Sep(foreground="282a36",background="282a36", padding=5),
+                widget.Prompt(foreground="161320", background="DDB6F2"),
+                widget.GroupBox(active="DDB6F2", inactive="6E6C7E", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="302D41"),
+                widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block",rounded=False),
+                widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
+                widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}"),
+                widget.Volume(background="96CDF8",foreground="161320"),
+                widget.Clock(format="%I:%M %p",foreground="161320", background="DDB6F2"),
+                widget.Systray(background="302D41"),
+                widget.Sep(foreground="302D41",background="302D41", padding=5),
             ],
             30,
         ),

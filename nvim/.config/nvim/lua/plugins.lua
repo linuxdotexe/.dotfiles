@@ -65,7 +65,16 @@ return require('packer').startup(function()
     branch = 'main',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
 }
-  use 'folke/tokyonight.nvim'
 
-  use '~/.config/nvim/myplugins/om.nvim'
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
+  
+  use ({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
+
+  -- use '~/.config/nvim/myplugins/om.nvim'
 end)

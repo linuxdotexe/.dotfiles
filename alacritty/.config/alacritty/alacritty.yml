@@ -2,7 +2,7 @@
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 import:
-  - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/catppuccin.yml
   - ~/.config/alacritty/fonts.yml
 
 env:
