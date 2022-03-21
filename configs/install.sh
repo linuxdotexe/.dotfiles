@@ -22,7 +22,7 @@ cd yay/
 makepkg -si
 
 # install from yay
-yay -S betterlockscreen dracula-gtk-theme google-chrome gotop-bin ly pfetch-btw playmymusic vimix-cursors visual-studio-code-bin nerd-fonts-ibm-plex-mono
+yay -S betterlockscreen catppuccin-gtk-theme google-chrome gotop-bin ly pfetch-btw playmymusic vimix-cursors visual-studio-code-bin nerd-fonts-ibm-plex-mono
 
 # enable tap to click
 echo "touchpad configuration editing"
