@@ -81,6 +81,10 @@ extension_defaults = widget_defaults.copy()
 kernel_info = str(subprocess.check_output("uname -r", shell=True))
 kernel_info = kernel_info[2:-3:]
 
+psmq = str(subprocess.check_output("shuf -n1 ~/.local/bin/psmq/quotes.txt", shell=True))
+psmq = psmq[2:-3:]
+psmq = psmq.replace("\\", "")
+
 screens = [
     Screen(
         wallpaper='~/.config/qtile/img/code.png',
@@ -90,6 +94,7 @@ screens = [
                 widget.Prompt(foreground="161320", background="DDB6F2"),
                 widget.GroupBox(active="DDB6F2", inactive="6E6C7E", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="302D41"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block",rounded=False),
+                widget.TextBox(psmq, foreground="161320", background="C9CBFF"),
                 widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
                 widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}"),
                 widget.Volume(background="96CDF8",foreground="161320"),
