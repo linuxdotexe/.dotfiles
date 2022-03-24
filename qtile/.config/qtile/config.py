@@ -98,7 +98,7 @@ screens = [
                 widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
                 widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}"),
                 widget.Volume(background="96CDF8",foreground="161320"),
-                widget.Clock(format="%I:%M %p",foreground="161320", background="DDB6F2"),
+                widget.Clock(format="%dth %B, %I:%M %p",foreground="161320", background="DDB6F2"),
                 widget.Systray(background="302D41"),
                 widget.Sep(foreground="302D41",background="302D41", padding=5),
             ],
