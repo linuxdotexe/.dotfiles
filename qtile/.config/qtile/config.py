@@ -70,7 +70,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="BlexMono Nerd Font Mono Medium Italic",
     fontsize=14,
     padding=4,
     background="161320",
