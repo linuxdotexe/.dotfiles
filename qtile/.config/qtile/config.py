@@ -81,7 +81,7 @@ extension_defaults = widget_defaults.copy()
 kernel_info = str(subprocess.check_output("uname -r", shell=True))
 kernel_info = kernel_info[2:-3:]
 
-psmq = str(subprocess.check_output("shuf -n1 ~/.local/bin/psmq/quotes.txt", shell=True))
+psmq = str(subprocess.check_output("shuf -n1 ~/.config/qtile/small_quotes.txt", shell=True))
 psmq = psmq[2:-3:]
 psmq = psmq.replace("\\", "")
 
