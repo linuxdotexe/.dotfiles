@@ -37,3 +37,7 @@ curl -fsSL https://starship.rs/install.sh | bash
 
 # change default shell to zsh
 chsh -S /bin/zsh
+
+# remove rounded corners for gtk applications
+cp ~/.dotfiles/configs/gtk.css ~/.config/gtk-2.0/gtk.css
+cp ~/.dotfiles/configs/gtk.css ~/.config/gtk-3.0/gtk.css
