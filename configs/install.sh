@@ -30,7 +30,7 @@ cp ~/.dotfiles/configs/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 
 # stow the config
 cd ~/.dotfiles/
-stow -R * --ignore="LICENSE" --ignore="README.md" --ignore="configs"
+stow -R * --ignore="LICENSE" --ignore="README.md" --ignore="configs" --ignore="dotfiles.png"
 
 # install starship
 curl -fsSL https://starship.rs/install.sh | bash
