@@ -1,38 +1,25 @@
 # dotfiles
-my dotfiles are here just in case i mess up my arch install.
-### Install Starship Prompt
+
+These are my .dotfiles. There are many like it but my .dotfiles are mine and I love them.
+
+## Using these .dotfiles
+
+I wrote a script to install all this. A script which I have yet to test.
+
+Run that script with this one command after a fresh Arch Linux install:
+
 ```
-curl -fsSL https://starship.rs/install.sh | bash
-```
-### Install apps
-``` 
-sudo pacman -S acpi alacritty awesome bat exa fd flameshot linux-headers lxappearance mesa mtpfs npm p7zip pamixer pavucontrol pcmanfm-gtk3 playerctl powerline-fonts ranger rofi subversion telegram-desktop ttf-roboto vlc xdotool xfce4-power-manager zathura zathura-pdf-poppler zsh
-```
-### Install yay
-```
-git clone https://aur.archlinux.org/yay.git
-cd yay/
-makepkg -si
-```
-### Apps to be installed through yay
-```
-yay -S brave-bin gruvbox-dark-icons-gtk gruvbox-material-gtk-theme-git librewolf-bin moc-pulse neovim-nightly-bin pfetch vimix-cursors
+bash <(curl -s https://github.com/linuxdotexe/.dotfiles/blob/archQtile/configs/install.sh)
 ```
 
-### Enable tap to click
-edit or create file ```/etc/X11/xorg.conf.d/30-touchpad.conf``` and paste this there
-```
-Section "InputClass" 
+Here is a picture to see how awesome my setup is
 
-        Identifier "touchpad" 
+![dotfiles.png](dotfiles.png)
 
-        Driver "libinput" 
+- Theme: [catppuccin](https://github.com/catppuccin)
+- Font: [BlexMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/IBMPlexMono)
+- Terminal: [Alacritty](https://github.com/alacritty/alacritty)
+- Resource Monitor: [gotop](https://github.com/cjbassi/gotop)
+- Image Viewer: [feh](https://github.com/derf/feh)
 
-        MatchIsTouchpad "on" 
-
-        Option "Tapping" "on" 
-
-        Option "TappingButtonMap" "lmr" 
-
-EndSection
-```
+Quotes displayed in the terminal and the WM are from a bunch of quotes I gather for a fun little CLI application I made, [psmq](https://github.com/linuxdotexe/psmq). The quotes are smaller for the WM and are inside the `qtile` folder. To get commands in the WM, psmq is not required.
