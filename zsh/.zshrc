@@ -123,3 +123,6 @@ function omit () {
     echo $1 >> .gitignore
 }
 # EO omit()
+
+# Log memory usage on opening a terminal
+bash -c 'date +"%r %D"; echo; free -glh; echo' >> .mem_usage.log
