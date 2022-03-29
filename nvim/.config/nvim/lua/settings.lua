@@ -30,8 +30,8 @@ vim.cmd[[colorscheme catppuccin]]
 
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 
--- PERF: bring back my nice beam cursor on the terminal
-vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:ver90')
+-- PERF: bring back my nice underline cursor on the terminal
+vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:hor20')
 
 -- PERF: preserve cursor position
 vim.cmd[[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
