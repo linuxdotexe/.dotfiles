@@ -96,7 +96,7 @@ screens = [
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block",rounded=False),
                 widget.TextBox(psmq, foreground="161320", background="C9CBFF"),
                 widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
-                widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}"),
+                widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}{char}", full_char="-f", discharge_char="-d", charge_char="-c"),
                 widget.Volume(background="96CDF8",foreground="161320"),
                 widget.Clock(format="%dth %B, %I:%M %p",foreground="161320", background="DDB6F2"),
                 widget.Systray(background="302D41"),
