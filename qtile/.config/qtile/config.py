@@ -46,6 +46,7 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5"), desc="Inc volume"),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5"), desc="Dec volume"),
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Toggle Mute"),
+    Key([mod], "b", lazy.spawn("google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode"), desc="Toggle Mute"),
     # Screen lock
     Key([mod], "l", lazy.spawn("betterlockscreen --lock"), desc="Lock screen"),
 
