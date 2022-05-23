@@ -6,7 +6,7 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/biggus/.zshrc'
+zstyle :compinstall filename '/home/user/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -87,11 +87,11 @@ mkd(){
 ### EO razzius/fish-functions ###
 
 # add pip to PATH
-export PATH=/home/biggus/.local/bin:$PATH
+export PATH=/home/user/.local/bin:$PATH
 # EO add pip to PATH
 
 # add psmq to PATH
-export PATH=/home/biggus/.local/bin/psmq:$PATH
+export PATH=/home/user/.local/bin/psmq:$PATH
 
 # dynamic window titles (help from reddit)
 case "$TERM" in
