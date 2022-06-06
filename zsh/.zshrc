@@ -22,7 +22,7 @@ eval "$(starship init zsh)"
 
 # aliases - start
 alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
-alias f='clear && psmq'
+alias f='clear && blocks'
 alias q='exit'
 alias py='python3'
 alias cl='tty-clock -c -t -C4 -D'
@@ -48,6 +48,7 @@ alias shellrc='nvim ~/.zshrc'
 alias die='shutdown now'
 alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
+alias ntp='sudo timedatectl set-ntp true'
 alias oc='code .;exit'
 alias bs='acpi -i'
 # EO aliases
@@ -93,6 +94,8 @@ export PATH=/home/user/.local/bin:$PATH
 # add psmq to PATH
 export PATH=/home/user/.local/bin/psmq:$PATH
 
+# add blocks to PATH
+export PATH=/home/user/.local/bin/blocks:$PATH
 # dynamic window titles (help from reddit)
 case "$TERM" in
     xterm*|rxvt*)
