@@ -49,7 +49,7 @@ keys = [
     Key([mod], "b", lazy.spawn("google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode"), desc="Toggle Mute"),
     # Screen lock
     Key([mod], "l", lazy.spawn("betterlockscreen --lock"), desc="Lock screen"),
-
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 ]
 groups = [Group(i) for i in "12345"]
 
