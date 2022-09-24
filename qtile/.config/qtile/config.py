@@ -51,7 +51,7 @@ keys = [
     Key([mod], "l", lazy.spawn("betterlockscreen --lock"), desc="Lock screen"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 ]
-groups = [Group(i) for i in "12345"]
+groups = [Group(i) for i in "123456789"]
 
 for i in groups:
     keys.extend(
@@ -88,7 +88,6 @@ psmq = psmq.replace("\\", "")
 
 screens = [
     Screen(
-        wallpaper='~/.config/qtile/img/code.png',
         top=bar.Bar(
             [
                 widget.Image(filename="~/.config/qtile/img/logo.png", margin=5),
@@ -132,4 +131,4 @@ focus_on_window_activation = "smart"
 # focus, should we respect this or not?
 auto_minimize = True
 
-
+subprocess.run("tw -df", shell=True)
