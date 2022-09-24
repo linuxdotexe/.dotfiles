@@ -127,3 +127,4 @@ function omit () {
 }
 # EO omit()
 
+export PATH=$PATH:$HOME/.local/bin/todowalp
