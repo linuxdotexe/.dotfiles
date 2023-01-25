@@ -12,53 +12,32 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# starfish prompt setup
-eval "$(starship init zsh)"
-# EO starfish prompt setup
-
-# print some movie quotes
-~/.local/bin/psmq/psmq
-# EO psmq
-
 # aliases - start
-alias fc='sudo pacman -Rsn $(pacman -Qdtq)'
-alias f='clear && blocks'
+
+alias f='clear'
 alias q='exit'
 alias py='python3'
-alias cl='tty-clock -c -t -C4 -D'
-alias i='sudo pacman -S'
-alias iy='yay -S'
-alias ry='yay -R'
-alias r='sudo pacman -R'
-alias se='pacman -Ss'
-alias sy='yay -Ss'
+alias i='sudo apt install'
+alias r='sudo apt remove'
 alias vim='nvim'
-alias ls='exa -l -h'
-alias ll='exa -la -h'
 alias gc='git commit'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push origin'
 alias fd='sudo fd -H -I -u'
-alias a='startx'
-alias upgrade='sudo pacman -Syu'
 alias vimrc='cd ~/.config/nvim/'
-alias wmrc='nvim ~/.config/qtile/config.py'
 alias shellrc='nvim ~/.zshrc'
 alias die='shutdown now'
 alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
 alias ntp='sudo timedatectl set-ntp true'
 alias oc='code .;exit'
-alias bs='acpi -i'
 # EO aliases
 
 # exports
 export EDITOR=nvim
 export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export TERM=xterm
-export TERMINAL=alacritty
 export BAT_THEME="Dracula"
 # EO exports
 
@@ -91,40 +70,10 @@ mkd(){
 export PATH=/home/user/.local/bin:$PATH
 # EO add pip to PATH
 
-# add psmq to PATH
-export PATH=/home/user/.local/bin/psmq:$PATH
-
-# add blocks to PATH
-export PATH=/home/user/.local/bin/blocks:$PATH
-# dynamic window titles (help from reddit)
-case "$TERM" in
-    xterm*|rxvt*)
-        function xtitle () {
-            builtin print -n -- "\e]0;$@\a"
-        }
-        ;;
-    screen)
-        function xtitle () {
-            builtin print -n -- "\ek$@\e\\"
-        }
-        ;;
-    *)
-        function xtitle () {
-        }
-esac
-
-function precmd () {
-    xtitle "$(print -P $HOST: zsh '(%~)')"
-}
- function preexec () {
-    xtitle "Running $1"
-}
-# EO dynamic window titles
-
 # Add files to .gitignore with one command
 function omit () {
     echo $1 >> .gitignore
 }
 # EO omit()
 
-export PATH=$PATH:$HOME/.local/bin/todowalp
+eval "$(starship init zsh)"
