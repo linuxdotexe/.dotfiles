@@ -32,6 +32,9 @@ alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
 alias ntp='sudo timedatectl set-ntp true'
 alias oc='code .;exit'
+
+alias ls='exa -l -h'
+alias ll='exa -la -h'
 # EO aliases
 
 # exports

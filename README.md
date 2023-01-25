@@ -2,4 +2,4 @@
 
 barebones repository for pop os. new beginnings.
 
-- [ ] install exa and write `ls` aliases
+- [x] install exa and write `ls` aliases
