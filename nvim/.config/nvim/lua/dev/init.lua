@@ -1,5 +1,6 @@
 require("dev.remap")
 require("dev.set")
+require("dev.packer")
 
 -- PRESERVE THE GODDAMN CURSOR FOR CHRIST'S SAKE
 vim.cmd('autocmd VimLeave,VimSuspend * set guicursor=a:hor20')
