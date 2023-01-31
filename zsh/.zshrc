@@ -32,6 +32,7 @@ alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
 alias ntp='sudo timedatectl set-ntp true'
 alias oc='code .;exit'
+alias bat='batcat'
 
 alias ls='exa -l -h'
 alias ll='exa -la -h'
@@ -40,8 +41,7 @@ alias ll='exa -la -h'
 # exports
 export EDITOR=nvim
 export MYVIMRC='$HOME/.config/nvim/init.vim'
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export BAT_THEME="Dracula"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 # EO exports
 
 # source /etc/profile for fastboot and adb to work
