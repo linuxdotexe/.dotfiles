@@ -1,8 +1,8 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
+	color = color or "melange"
 	vim.cmd.colorscheme(color)
 
-    grey = "#505050"
+    grey = "#252525"
 
     vim.api.nvim_set_hl(0, "Normal", { bg =  "none" } )
     vim.api.nvim_set_hl(0, "NormalFloat", { bg =  "none" } )
