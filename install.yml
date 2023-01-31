@@ -1,0 +1,10 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+  tasks:
+    - name: Install with apt
+      apt:
+        name: ["zsh", "bat", "stow", "nodejs", "npm"]
