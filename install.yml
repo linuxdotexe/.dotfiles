@@ -7,4 +7,47 @@
   tasks:
     - name: Install with apt
       apt:
-        name: ["zsh", "bat", "stow", "nodejs", "npm"]
+        name: ["zsh", "bat", "stow", "nodejs", "npm", "exa"]
+      tags:
+        - apt
+    - name: Download NeoVim
+      ansible.builtin.get_url:
+        url: https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
+        dest: /home/dev/Downloads/
+      tags:
+        - nvim
+    - name: Install NeoVim
+      shell: |
+        apt install ./nvim-linux64.deb
+      tags:
+        - nvim
+    - name: Download Nerd Font
+      ansible.builtin.get_url:
+        url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/CascadiaCode.zip
+        dest: /usr/local/share/fonts/
+      tags:
+        - nerdfont
+    - name: Unzip Nerd Font
+      ansible.builtin.unarchive:
+        src: /usr/local/share/fonts/CascadiaCode.zip
+        dest: /usr/local/share/fonts/
+      tags:
+        - nerdfont
+    - name: Install Nerd Font
+      shell: |
+        fc-cache -f -v
+      tags:
+        - nerdfont
+    - name: Download Exa
+      ansible.builtin.get_url:
+        url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/CascadiaCode.zip
+        dest: /usr/local/share/fonts/
+      tags:
+        - nerdfont
+    - name: Install Gatsby
+      npm:
+        name: gatsby-cli
+        global: yes
+    - name: Change default shell
+      shell: |
+        stow -D *
