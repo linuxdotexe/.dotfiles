@@ -19,14 +19,14 @@ alias q='exit'
 alias py='python3'
 alias i='sudo apt install'
 alias r='sudo apt remove'
-alias vim='nvim'
+alias vim='lvim'
 alias gc='git commit'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push origin'
 alias fd='sudo fd -H -I -u'
 alias vimrc='cd ~/.config/nvim/'
-alias shellrc='nvim ~/.zshrc'
+alias shellrc='lvim ~/.zshrc'
 alias die='shutdown now'
 alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
@@ -42,6 +42,7 @@ alias ll='exa -la -h'
 export EDITOR=nvim
 export MYVIMRC='$HOME/.config/nvim/init.vim'
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export PATH=/home/dev/.local/bin/:$PATH
 # EO exports
 
 # source /etc/profile for fastboot and adb to work
