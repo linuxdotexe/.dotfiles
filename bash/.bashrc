@@ -52,4 +52,5 @@ function omit () {
 }
 # EO omit()
 
+PATH="~/.local/bin:$PATH"
 
