@@ -7,7 +7,7 @@ from libqtile.lazy import lazy
 import subprocess
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -71,7 +71,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="BlexMono Nerd Font Mono Medium Italic",
+    font="CaskaydiaCove Nerd Font Mono Medium",
     fontsize=14,
     padding=4,
     background="161320",
@@ -88,6 +88,7 @@ psmq = psmq.replace("\\", "")
 
 screens = [
     Screen(
+        wallpaper='~/.config/qtile/img/code.png',
         top=bar.Bar(
             [
                 widget.Image(filename="~/.config/qtile/img/logo.png", margin=5),
@@ -131,4 +132,7 @@ focus_on_window_activation = "smart"
 # focus, should we respect this or not?
 auto_minimize = True
 
-subprocess.run("tw -df", shell=True)
+# Auto Start
+subprocess.run("xfce4-power-manager &", shell=True)
+subprocess.run("nm-applet &", shell=True)
+
