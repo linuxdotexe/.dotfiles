@@ -91,7 +91,7 @@ screens = [
         wallpaper='~/.config/qtile/img/code.png',
         top=bar.Bar(
             [
-                widget.Image(filename="~/.config/qtile/img/logo.png", margin=5),
+                widget.Image(filename="~/.config/qtile/img/macchiato_squircle.png", margin=5),
                 widget.Prompt(foreground="161320", background="DDB6F2"),
                 widget.GroupBox(active="DDB6F2", inactive="6E6C7E", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="302D41"),
                 widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block",rounded=False),
