@@ -136,4 +136,5 @@ auto_minimize = True
 # Auto Start
 subprocess.run("xfce4-power-manager &", shell=True)
 subprocess.run("nm-applet &", shell=True)
+subprocess.run("picom &", shell=True)
 
