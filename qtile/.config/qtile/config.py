@@ -88,7 +88,8 @@ psmq = psmq.replace("\\", "")
 
 screens = [
     Screen(
-        wallpaper='~/.config/qtile/img/code.png',
+        wallpaper='~/.config/qtile/img/ign_robots.png',
+        wallpaper_mode='fill',
         top=bar.Bar(
             [
                 widget.Image(filename="~/.config/qtile/img/macchiato_squircle.png", margin=5),
