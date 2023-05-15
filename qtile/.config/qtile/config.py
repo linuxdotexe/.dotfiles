@@ -149,7 +149,13 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(margin=4, border_width=2, border_focus="#6E6C7E", border_normal="#161320", border_on_single=True),
+    layout.Columns(
+        margin=4,
+        border_width=2,
+        border_focus="#6E6C7E",
+        border_normal="#161320",
+        border_on_single=True
+    ),
     layout.Max(),
 ]
 
@@ -174,21 +180,91 @@ screens = [
         wallpaper_mode='fill',
         top=bar.Bar(
             [
-                widget.Image(background="11111b", filename="~/.config/qtile/img/macchiato_squircle.png", margin=5),
-                widget.Prompt(foreground="161320", background="DDB6F2"),
-                widget.GroupBox(active="DDB6F2", inactive="6E6C7E", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="302D41"),
-                widget.TaskList(urgent_alert_method="text", font="CaskaydiaCove Nerd Font Mono", margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block"),
-                widget.TextBox(psmq, font="CaskaydiaCove Nerd Font Mono Italic", foreground="161320", background="C9CBFF"),
-                # widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
-                widget.CheckUpdates(distro="debian", foreground="161320", background="ABE9B3"),
-                widget.Wttr(location={"Vijayawada": "VIJ"}, format='VJ: %t', foreground="161320", background="ABE9B3"),
-                # widget.NvidiaSensors(format='NV: {temp}°C', foreground="161320", background="ABE9B3"),
-                widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}{char}", full_char="-f", discharge_char="-d", charge_char="-c"),
-                widget.Volume(background="96CDF8",foreground="161320"),
-                widget.Clock(format="%dth %B, %I:%M %p",foreground="161320", background="DDB6F2"),
-                widget.Systray(background="302D4100"),
-                widget.Sep(foreground="302D4100",background="302D4100", padding=5),
-                widget.QuickExit(fmt="[X]", foreground="161320", background="f38ba8"),
+                widget.Image(
+                    background="11111b00",
+                    filename="~/.config/qtile/img/macchiato_squircle.png",
+                    margin=5
+                ),
+                widget.Prompt(
+                    foreground="161320",
+                    background="DDB6F2"
+                ),
+                widget.GroupBox(
+                    active="DDB6F2",
+                    inactive="6E6C7E",
+                    disable_drag=True,
+                    fontsize=18,
+                    hide_unused=True,
+                    highlight_method="block",
+                    this_current_screen_border="302D41"
+                ),
+                widget.TaskList(
+                    urgent_alert_method="text",
+                    font="CaskaydiaCove Nerd Font Mono",
+                    margin=0,
+                    max_title_width=150,
+                    padding=5,
+                    icon_size=0,
+                    border="302D41",
+                    foreground="D9E0EE",
+                    borderwidth=0,
+                    highlight_method="block"
+                ),
+                widget.TextBox(
+                    psmq,
+                    font="CaskaydiaCove Nerd Font Mono Italic",
+                    foreground="161320",
+                    background="C9CBFF"
+                ),
+                # widget.TextBox(
+                #    kernel_info,
+                #    foreground="161320",
+                #    background="ABE9B3"
+                # ),
+                widget.CheckUpdates(
+                    distro="debian",
+                    foreground="161320",
+                    background="ABE9B3"
+                ),
+                widget.Wttr(
+                    location={"Vijayawada": "VIJ"},
+                    format='VJ: %t',
+                    foreground="161320",
+                    background="ABE9B3"
+                ),
+                widget.Battery(
+                    foreground="161320",
+                    background="F2CDCD",
+                    low_background="F28FAD",
+                    low_foreground="161320",
+                    low_percentage=0.2,
+                    format="{percent:2.0%}{char}",
+                    full_char="-f",
+                    discharge_char="-d",
+                    charge_char="-c"
+                ),
+                widget.Volume(
+                    background="96CDF8",
+                    foreground="161320"
+                ),
+                widget.Clock(
+                    format="%dth %B, %I:%M %p",
+                    foreground="161320",
+                    background="DDB6F2"
+                ),
+                widget.Systray(
+                    background="302D4100"
+                ),
+                widget.Sep(
+                    foreground="302D4100",
+                    background="302D4100",
+                    padding=5
+                ),
+                widget.QuickExit(
+                    fmt="[X]",
+                    foreground="161320",
+                    background="f38ba8"
+                ),
             ],
             30,
             background="11111be6",
