@@ -163,7 +163,7 @@ widget_defaults = dict(
     font="CaskaydiaCove Nerd Font Mono Medium",
     fontsize=14,
     padding=5,
-    rounded=True,
+    rounded=False,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -181,22 +181,22 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(
-                    background="11111b00",
+                    background="11111be6",
                     filename="~/.config/qtile/img/macchiato_squircle.png",
-                    margin=5
+                    margin=3
                 ),
                 widget.Prompt(
                     foreground="161320",
                     background="DDB6F2"
                 ),
                 widget.GroupBox(
-                    active="DDB6F2",
-                    inactive="6E6C7E",
+                    active="bac2de",
+                    inactive="6c7086",
                     disable_drag=True,
                     fontsize=18,
                     hide_unused=True,
                     highlight_method="block",
-                    this_current_screen_border="302D41"
+                    this_current_screen_border="313244"
                 ),
                 widget.TaskList(
                     urgent_alert_method="text",
