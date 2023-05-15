@@ -13,44 +13,127 @@ keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
-    Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
-    Key([mod], "d", lazy.screen.next_group(), desc="Move to next group"),
-    Key([mod], "a", lazy.screen.prev_group(), desc="Move to prev group"),
+    Key(
+        [mod], "Tab", 
+        lazy.layout.next(), 
+        desc="Move window focus to other window"
+    ),
+    Key(
+        [mod], "d",
+        lazy.screen.next_group(),
+        desc="Move to next group"
+    ),
+    Key(
+        [mod], "a",
+        lazy.screen.prev_group(),
+        desc="Move to prev group"
+    ),
+    
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "shift"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "shift"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "shift"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key(
+        [mod, "shift"], "h", 
+        lazy.layout.grow_left(), 
+        desc="Grow window to the left"
+    ),
+    Key(
+        [mod, "shift"], "l",
+        lazy.layout.grow_right(),
+        desc="Grow window to the right"
+    ),
+    Key(
+        [mod, "shift"], "j", 
+        lazy.layout.grow_down(), 
+        desc="Grow window down"
+    ),
+    Key(
+        [mod, "shift"], "k",
+        lazy.layout.grow_up(),
+        desc="Grow window up"
+    ),
+    Key(
+        [mod], "n",
+        lazy.layout.normalize(),
+        desc="Reset all window sizes"
+    ),
+
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key(
-        [mod, "shift"],
-        "Return",
+        [mod, "shift"], "Return",
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key(
+        [mod], "Return", 
+        lazy.spawn(terminal), 
+        desc="Launch terminal"
+    ),
     # Toggle between different layouts as defined below
     # Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key(
+        [mod], "w",
+        lazy.window.kill(),
+        desc="Kill focused window"
+    ),
+    Key(
+        [mod, "control"], "r",
+        lazy.reload_config(),
+        desc="Reload the config"
+    ),
+    Key(
+        [mod, "control"], "q",
+        lazy.shutdown(),
+        desc="Shutdown Qtile"
+    ),
+    Key(
+        [mod], "space",
+        lazy.spawncmd(),
+        desc="Spawn a command using a prompt widget"
+    ),
     # Minimize focused window - xdotool
-    Key([mod, "control"], "m", lazy.spawn("bash -c 'xdotool windowminimize $(xdotool getactivewindow)'"), desc="Spawn Telegram"),
+    Key(
+        [mod], "m",
+        lazy.spawn("bash -c 'xdotool windowminimize $(xdotool getactivewindow)'"),
+        desc="Minimize window"
+    ),
     # Volume controls
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5"), desc="Inc volume"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5"), desc="Dec volume"),
-    Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Toggle Mute"),
-    Key([mod], "b", lazy.spawn("google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode"), desc="Toggle Mute"),
+    Key(
+        [], "XF86AudioRaiseVolume",
+        lazy.spawn("pamixer -i 5"),
+        desc="Inc volume"
+    ),
+    Key(
+        [], "XF86AudioLowerVolume",
+        lazy.spawn("pamixer -d 5"),
+        desc="Dec volume"
+    ),
+    Key(
+        [], "XF86AudioMute",
+        lazy.spawn("pamixer -t"),
+        desc="Toggle Mute"
+    ),
+    Key(
+        [mod], "b",
+        lazy.spawn("brave-browser"),
+        desc="Spawn Brave"
+    ),
     # Screen lock
-    Key([mod], "l", lazy.spawn("betterlockscreen --lock"), desc="Lock screen"),
-    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
+    Key(
+        [mod], "l",
+        lazy.spawn("betterlockscreen --lock"),
+        desc="Lock screen"
+    ),
+    # Full screen, bar still visible. Love this change.
+    Key(
+        [mod], "f",
+        lazy.next_layout(),
+        desc="Toggle fullscreen"
+    ),
 ]
+
 groups = [Group(i) for i in "123456789"]
 
 for i in groups:
@@ -73,9 +156,8 @@ layouts = [
 widget_defaults = dict(
     font="CaskaydiaCove Nerd Font Mono Medium",
     fontsize=14,
-    padding=4,
-    background="11111b",
-    rounded=False,
+    padding=5,
+    rounded=True,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -92,19 +174,24 @@ screens = [
         wallpaper_mode='fill',
         top=bar.Bar(
             [
-                widget.Image(filename="~/.config/qtile/img/macchiato_squircle.png", margin=5),
+                widget.Image(background="11111b", filename="~/.config/qtile/img/macchiato_squircle.png", margin=5),
                 widget.Prompt(foreground="161320", background="DDB6F2"),
                 widget.GroupBox(active="DDB6F2", inactive="6E6C7E", disable_drag=True, fontsize=18, hide_unused=True, highlight_method="block", this_current_screen_border="302D41"),
-                widget.TaskList(margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block",rounded=False),
-                widget.TextBox(psmq, foreground="161320", background="C9CBFF"),
-                widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
+                widget.TaskList(urgent_alert_method="text", font="CaskaydiaCove Nerd Font Mono", margin=0,max_title_width=150,padding=5,icon_size=0,border="302D41",foreground="D9E0EE",borderwidth=0,highlight_method="block"),
+                widget.TextBox(psmq, font="CaskaydiaCove Nerd Font Mono Italic", foreground="161320", background="C9CBFF"),
+                # widget.TextBox(kernel_info, foreground="161320", background="ABE9B3"),
+                widget.CheckUpdates(distro="debian", foreground="161320", background="ABE9B3"),
+                widget.Wttr(location={"Vijayawada": "VIJ"}, format='VJ: %t', foreground="161320", background="ABE9B3"),
+                # widget.NvidiaSensors(format='NV: {temp}°C', foreground="161320", background="ABE9B3"),
                 widget.Battery(foreground="161320",background="F2CDCD",low_background="F28FAD",low_foreground="161320",low_percentage=0.2,format="{percent:2.0%}{char}", full_char="-f", discharge_char="-d", charge_char="-c"),
                 widget.Volume(background="96CDF8",foreground="161320"),
                 widget.Clock(format="%dth %B, %I:%M %p",foreground="161320", background="DDB6F2"),
-                widget.Systray(background="302D41"),
-                widget.Sep(foreground="302D41",background="302D41", padding=5),
+                widget.Systray(background="302D4100"),
+                widget.Sep(foreground="302D4100",background="302D4100", padding=5),
+                widget.QuickExit(fmt="[X]", foreground="161320", background="f38ba8"),
             ],
             30,
+            background="11111be6",
         ),
     ),
 ]
