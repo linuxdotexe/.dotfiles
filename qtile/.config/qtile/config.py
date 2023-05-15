@@ -74,7 +74,7 @@ widget_defaults = dict(
     font="CaskaydiaCove Nerd Font Mono Medium",
     fontsize=14,
     padding=4,
-    background="161320",
+    background="11111b",
     rounded=False,
 )
 extension_defaults = widget_defaults.copy()
