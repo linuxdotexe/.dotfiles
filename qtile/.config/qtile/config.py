@@ -134,19 +134,61 @@ keys = [
     ),
 ]
 
-groups = [Group(i) for i in "123456789"]
+# groups = [Group(i) for i in "123456789"]
 
-for i in groups:
-    keys.extend(
-        [
-            Key(
-                [mod, "shift"],
-                i.name,
-                lazy.window.togroup(i.name, switch_group=True),
-                desc="Switch to & move focused window to group {}".format(i.name),
-            ),
-        ]
+groups = [
+    Group(
+        name="web",
+        position=1,
+        layout="max",
+        matches=[Match(wm_class=["Brave Browser"])],
+        spawn=["brave-browser"]
+    ),
+    Group(
+        name="dev",
+        position=2
+    ),
+    Group(
+        name="chat",
+        position=3,
+        matches=[Match(wm_class=["Telegram"])],
+        spawn=["telegram-desktop"]
+    ),
+    Group(
+        name="ent",
+        position=4,
+        layout="max"
+    ),
+    Group(
+        name="misc",
+        position=5
     )
+]
+
+# Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
+# MOD4 + index Number : Switch to Group[index]
+# MOD4 + shift + index Number : Send active window to another Group
+
+from libqtile.dgroups import simple_key_binder
+dgroups_key_binder = simple_key_binder("mod4")
+
+# for i in groups:
+#     keys.extend(
+#         [
+#             Key(
+#                 [mod, "shift"],
+#                 i.position,
+#                 lazy.window.togroup(i.name, switch_group=True),
+#                 desc="Switch to & move focused window to group {}".format(i.name),
+#             ),
+#             Key(
+#                 [mod],
+#                 i.position,
+#                 lazy.group[i.name].toscreen(),
+#                 desc="Switch to group {}".format(i.name),
+#             ),
+#         ]
+#     )
 
 layouts = [
     layout.Columns(
@@ -167,74 +209,73 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-kernel_info = str(subprocess.check_output("uname -r", shell=True))
-kernel_info = kernel_info[2:-3:]
-
-psmq = str(subprocess.check_output("shuf -n1 ~/.config/qtile/small_quotes.txt", shell=True))
-psmq = psmq[2:-3:]
-psmq = psmq.replace("\\", "")
+def psmq():
+    psmq = str(subprocess.check_output("shuf -n1 ~/.config/qtile/small_quotes.txt", shell=True))
+    psmq = psmq[2:-3:]
+    psmq = psmq.replace("\\", "")
+    return psmq
 
 screens = [
     Screen(
         wallpaper='~/.config/qtile/img/ign_robots.png',
+        # wallpaper='~/image.png',
         wallpaper_mode='fill',
         top=bar.Bar(
             [
                 widget.Image(
                     background="11111be6",
                     filename="~/.config/qtile/img/macchiato_squircle.png",
-                    margin=3
+                    margin=5
                 ),
                 widget.Prompt(
+                    fontsize=14,
                     foreground="161320",
                     background="DDB6F2"
                 ),
                 widget.GroupBox(
                     active="bac2de",
+                    background="11111be6",
+                    block_highlight_text_color="11111b",
                     inactive="6c7086",
                     disable_drag=True,
-                    fontsize=18,
-                    hide_unused=True,
-                    highlight_method="block",
+                    font="CaskaydiaCove Nerd Font Mono",
+                    highlight_method="line",
+                    highlight_color="cba6f7",
                     this_current_screen_border="313244"
                 ),
                 widget.TaskList(
                     urgent_alert_method="text",
                     font="CaskaydiaCove Nerd Font Mono",
+                    fontsize=16,
                     margin=0,
                     max_title_width=150,
                     padding=5,
                     icon_size=0,
-                    border="302D41",
-                    foreground="D9E0EE",
+                    border="11111be6",
+                    foreground="f2cdcd",
                     borderwidth=0,
                     highlight_method="block"
                 ),
                 widget.TextBox(
-                    psmq,
+                    psmq(),
                     font="CaskaydiaCove Nerd Font Mono Italic",
                     foreground="161320",
-                    background="C9CBFF"
-                ),
-                # widget.TextBox(
-                #    kernel_info,
-                #    foreground="161320",
-                #    background="ABE9B3"
-                # ),
-                widget.CheckUpdates(
-                    distro="debian",
-                    foreground="161320",
-                    background="ABE9B3"
+                    background="cba6f7e6"
                 ),
                 widget.Wttr(
                     location={"Vijayawada": "VIJ"},
                     format='VJ: %t',
                     foreground="161320",
-                    background="ABE9B3"
+                    background="fab387e6"
+                ),
+                widget.NvidiaSensors(
+                    format="NV: {temp}°C",
+                    foreground="161320",
+                    background="f9e2afe6"
                 ),
                 widget.Battery(
                     foreground="161320",
-                    background="F2CDCD",
+                    background="a6e3a1e6",
                     low_background="F28FAD",
                     low_foreground="161320",
                     low_percentage=0.2,
@@ -244,13 +285,14 @@ screens = [
                     charge_char="-c"
                 ),
                 widget.Volume(
-                    background="96CDF8",
+                    fmt='V: {}',
+                    background="94e2d5e6",
                     foreground="161320"
                 ),
                 widget.Clock(
                     format="%dth %B, %I:%M %p",
                     foreground="161320",
-                    background="DDB6F2"
+                    background="74c7ece6"
                 ),
                 widget.Systray(
                     background="302D4100"
@@ -263,16 +305,16 @@ screens = [
                 widget.QuickExit(
                     fmt="[X]",
                     foreground="161320",
-                    background="f38ba8"
+                    background="f38ba8e6"
                 ),
             ],
             30,
-            background="11111be6",
+            background="11111b00",
         ),
     ),
 ]
 
-dgroups_key_binder = None
+# dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 follow_mouse_focus = True
 bring_front_click = False
