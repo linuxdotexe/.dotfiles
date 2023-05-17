@@ -134,30 +134,32 @@ keys = [
     ),
 ]
 
-# groups = [Group(i) for i in "123456789"]
-
 groups = [
     Group(
         name="web",
         position=1,
         layout="max",
-        matches=[Match(wm_class=["Brave Browser"])],
-        spawn=["brave-browser"]
+        matches=[Match(wm_class=["Brave-browser"])],
+        spawn=["brave-browser"],
+        exclusive=True,
     ),
     Group(
         name="dev",
-        position=2
+        matches=[Match(wm_class=["kitty", "Code"])],
+        position=2,
     ),
     Group(
         name="chat",
         position=3,
-        matches=[Match(wm_class=["Telegram"])],
-        spawn=["telegram-desktop"]
+        matches=[Match(wm_class=["Telegram", "discord"])],
+        spawn=["telegram-desktop"],
     ),
     Group(
         name="ent",
         position=4,
-        layout="max"
+        layout="max",
+        matches=[Match(wm_class=["vlc"])],
+        exclusive=True,
     ),
     Group(
         name="misc",
@@ -171,24 +173,6 @@ groups = [
 
 from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder("mod4")
-
-# for i in groups:
-#     keys.extend(
-#         [
-#             Key(
-#                 [mod, "shift"],
-#                 i.position,
-#                 lazy.window.togroup(i.name, switch_group=True),
-#                 desc="Switch to & move focused window to group {}".format(i.name),
-#             ),
-#             Key(
-#                 [mod],
-#                 i.position,
-#                 lazy.group[i.name].toscreen(),
-#                 desc="Switch to group {}".format(i.name),
-#             ),
-#         ]
-#     )
 
 layouts = [
     layout.Columns(
@@ -218,13 +202,13 @@ def psmq():
 screens = [
     Screen(
         wallpaper='~/.config/qtile/img/ign_robots.png',
-        # wallpaper='~/image.png',
         wallpaper_mode='fill',
         top=bar.Bar(
             [
                 widget.Image(
                     background="11111be6",
-                    filename="~/.config/qtile/img/macchiato_squircle.png",
+                    # filename="~/.config/qtile/img/macchiato_squircle.png",
+                    filename="~/.config/qtile/img/1.png",
                     margin=5
                 ),
                 widget.Prompt(
@@ -233,15 +217,15 @@ screens = [
                     background="DDB6F2"
                 ),
                 widget.GroupBox(
+                    borderwidth=5,
                     active="bac2de",
-                    background="11111be6",
-                    block_highlight_text_color="11111b",
                     inactive="6c7086",
+                    background="11111be6",
                     disable_drag=True,
                     font="CaskaydiaCove Nerd Font Mono",
                     highlight_method="line",
-                    highlight_color="cba6f7",
-                    this_current_screen_border="313244"
+                    highlight_color="181825e6",
+                    this_current_screen_border="cba6f7"
                 ),
                 widget.TaskList(
                     urgent_alert_method="text",

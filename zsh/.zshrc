@@ -82,28 +82,28 @@ export PATH=/home/biggus/.local/bin:$PATH
 # add blocks to PATH
 # export PATH=/home/user/.local/bin/blocks:$PATH
 # dynamic window titles (help from reddit)
-case "$TERM" in
-    xterm*|rxvt*)
-        function xtitle () {
-            builtin print -n -- "\e]0;$@\a"
-        }
-        ;;
-    screen)
-        function xtitle () {
-            builtin print -n -- "\ek$@\e\\"
-        }
-        ;;
-    *)
-        function xtitle () {
-        }
-esac
+# case "$TERM" in
+#     xterm*|rxvt*)
+#         function xtitle () {
+#             builtin print -n -- "\e]0;$@\a"
+#         }
+#         ;;
+#     screen)
+#         function xtitle () {
+#             builtin print -n -- "\ek$@\e\\"
+#         }
+#         ;;
+#     *)
+#         function xtitle () {
+#         }
+# esac
 
-function precmd () {
-    xtitle "$(print -P $HOST: zsh '(%~)')"
-}
- function preexec () {
-    xtitle "Running $1"
-}
+# function precmd () {
+#     xtitle "$(print -P $HOST: zsh '(%~)')"
+# }
+#  function preexec () {
+#     xtitle "Running $1"
+# }
 # EO dynamic window titles
 
 # Add files to .gitignore with one command
