@@ -37,6 +37,7 @@ alias netres='sudo systemctl restart NetworkManager.service'
 alias ntp='sudo timedatectl set-ntp true'
 alias oc='code .;exit'
 alias bs='acpi -i'
+alias td='killall dunst;notify-send foo'
 # EO aliases
 
 # exports
