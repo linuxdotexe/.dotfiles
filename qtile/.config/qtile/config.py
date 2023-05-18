@@ -14,6 +14,11 @@ keys = [
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
     Key(
+        [mod], "v",
+        lazy.hide_show_bar("top"),
+        desc="Hide top bar",
+    ),
+    Key(
         [mod], "Tab", 
         lazy.layout.next(), 
         desc="Move window focus to other window"
@@ -230,15 +235,16 @@ screens = [
                 widget.TaskList(
                     urgent_alert_method="text",
                     font="CaskaydiaCove Nerd Font Mono",
-                    fontsize=16,
+                    fontsize=14,
                     margin=0,
                     max_title_width=150,
-                    padding=5,
+                    padding=6,
                     icon_size=0,
                     border="11111be6",
                     foreground="f2cdcd",
                     borderwidth=0,
-                    highlight_method="block"
+                    highlight_method="block",
+                    center_aligned=True
                 ),
                 widget.TextBox(
                     psmq(),
