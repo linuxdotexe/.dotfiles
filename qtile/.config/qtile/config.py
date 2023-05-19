@@ -107,17 +107,17 @@ keys = [
     # Volume controls
     Key(
         [], "XF86AudioRaiseVolume",
-        lazy.spawn("pamixer -i 5"),
+        lazy.spawn("bash -c 'pamixer -i 5; notify-send VOLUME $(pamixer --get-volume) -t 250'"),
         desc="Inc volume"
     ),
     Key(
         [], "XF86AudioLowerVolume",
-        lazy.spawn("pamixer -d 5"),
+        lazy.spawn("bash -c 'pamixer -d 5; notify-send VOLUME $(pamixer --get-volume) -t 250'"),
         desc="Dec volume"
     ),
     Key(
         [], "XF86AudioMute",
-        lazy.spawn("pamixer -t"),
+        lazy.spawn("bash -c 'pamixer -t; notify-send VOLUME $(pamixer --get-mute) -t 250'"),
         desc="Toggle Mute"
     ),
     Key(
@@ -206,7 +206,7 @@ def psmq():
 
 screens = [
     Screen(
-        wallpaper='~/.config/qtile/img/ign_robots.png',
+        wallpaper='~/.config/qtile/img/walps/cavera.jpg',
         wallpaper_mode='fill',
         top=bar.Bar(
             [
