@@ -155,6 +155,7 @@ groups = [
     ),
     Group(
         name="write",
+        layout="max",
         matches=[Match(wm_class=["obsidian"])],
         exclusive=True,
         position=3,
