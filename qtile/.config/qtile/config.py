@@ -150,25 +150,31 @@ groups = [
     ),
     Group(
         name="dev",
-        matches=[Match(wm_class=["kitty", "Code", "obsidian"])],
+        matches=[Match(wm_class=["kitty", "Code"])],
         position=2,
     ),
     Group(
-        name="chat",
+        name="write",
+        matches=[Match(wm_class=["obsidian"])],
+        exclusive=True,
         position=3,
+    ),
+    Group(
+        name="chat",
+        position=4,
         matches=[Match(wm_class=["Telegram", "discord"])],
         spawn=["telegram-desktop"],
     ),
     Group(
         name="ent",
-        position=4,
+        position=5,
         layout="max",
         matches=[Match(wm_class=["vlc"])],
         exclusive=True,
     ),
     Group(
         name="misc",
-        position=5
+        position=6
     )
 ]
 
