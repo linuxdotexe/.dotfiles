@@ -150,7 +150,7 @@ groups = [
     ),
     Group(
         name="dev",
-        matches=[Match(wm_class=["kitty", "Code"])],
+        matches=[Match(wm_class=["kitty", "Code", "obsidian"])],
         position=2,
     ),
     Group(
