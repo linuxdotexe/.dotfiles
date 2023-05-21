@@ -34,6 +34,12 @@ keys = [
         desc="Move to prev group"
     ),
     
+    Key(
+        [mod], "Escape",
+        lazy.screen.toggle_group(),
+        desc="Toggle group"
+    ),
+
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key(
@@ -233,7 +239,7 @@ screens = [
                     active="bac2de",
                     inactive="6c7086",
                     background="11111be6",
-                    disable_drag=True,
+                    disable_drag=False,
                     font="CaskaydiaCove Nerd Font Mono",
                     highlight_method="line",
                     highlight_color="181825e6",
