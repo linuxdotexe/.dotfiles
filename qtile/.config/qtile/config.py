@@ -123,7 +123,7 @@ keys = [
     ),
     Key(
         [], "XF86AudioMute",
-        lazy.spawn("bash -c 'pamixer -t; notify-send VOLUME $(pamixer --get-mute) -t 250'"),
+        lazy.spawn("bash -c 'pamixer -t; notify-send MUTE $(pamixer --get-mute) -t 500'"),
         desc="Toggle Mute"
     ),
     Key(
@@ -170,7 +170,8 @@ groups = [
         name="chat",
         position=4,
         matches=[Match(wm_class=["Telegram", "discord"])],
-        spawn=["telegram-desktop"],
+        layout="max",
+        spawn=["telegram-desktop", "discord"],
     ),
     Group(
         name="ent",
