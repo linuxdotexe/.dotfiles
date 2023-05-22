@@ -162,7 +162,7 @@ groups = [
     Group(
         name="write",
         layout="max",
-        matches=[Match(wm_class=["obsidian"])],
+        matches=[Match(wm_class=["obsidian", "starc.AppImage"])],
         exclusive=True,
         position=3,
     ),
@@ -180,10 +180,6 @@ groups = [
         matches=[Match(wm_class=["vlc"])],
         exclusive=True,
     ),
-    Group(
-        name="misc",
-        position=6
-    )
 ]
 
 # Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
