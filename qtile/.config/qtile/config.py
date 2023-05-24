@@ -281,7 +281,7 @@ screens = [
                     format="{char} {percent:2.0%}",
                     full_char="󰂅",
                     discharge_char="󱟞",
-                    charge_char="󰢜"
+                    charge_char="󰚥"
                 ),
                 widget.Volume(
                     fmt='󰕾 {}',
