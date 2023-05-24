@@ -143,12 +143,16 @@ keys = [
         lazy.next_layout(),
         desc="Toggle fullscreen"
     ),
+    Key(
+        [mod], "s",
+        lazy.spawn('bash -c ~/.local/bin/starc.AppImage'),
+        desc="open starc"
+    ),
 ]
 
 groups = [
     Group(
         name="web",
-        position=1,
         layout="max",
         matches=[Match(wm_class=["Brave-browser"])],
         spawn=["brave-browser"],
@@ -157,25 +161,21 @@ groups = [
     Group(
         name="dev",
         matches=[Match(wm_class=["kitty", "Code"])],
-        position=2,
     ),
     Group(
         name="write",
         layout="max",
         matches=[Match(wm_class=["obsidian", "starc.AppImage"])],
         exclusive=True,
-        position=3,
     ),
     Group(
         name="chat",
-        position=4,
-        matches=[Match(wm_class=["Telegram", "discord"])],
         layout="max",
+        matches=[Match(wm_class=["Telegram", "discord"])],
         spawn=["telegram-desktop", "discord"],
     ),
     Group(
         name="ent",
-        position=5,
         layout="max",
         matches=[Match(wm_class=["vlc"])],
         exclusive=True,
@@ -222,7 +222,6 @@ screens = [
             [
                 widget.Image(
                     background="11111be6",
-                    # filename="~/.config/qtile/img/macchiato_squircle.png",
                     filename="~/.config/qtile/img/1.png",
                     margin=5
                 ),
@@ -264,12 +263,12 @@ screens = [
                 ),
                 widget.Wttr(
                     location={"Vijayawada": "VIJ"},
-                    format='VJ: %t',
+                    format=' %t',
                     foreground="161320",
                     background="fab387e6"
                 ),
                 widget.NvidiaSensors(
-                    format="NV: {temp}°C",
+                    format="󱤓 {temp}°C",
                     foreground="161320",
                     background="f9e2afe6"
                 ),
@@ -279,13 +278,13 @@ screens = [
                     low_background="F28FAD",
                     low_foreground="161320",
                     low_percentage=0.2,
-                    format="{percent:2.0%}{char}",
-                    full_char="-f",
-                    discharge_char="-d",
-                    charge_char="-c"
+                    format="{char} {percent:2.0%}",
+                    full_char="󰂅",
+                    discharge_char="󱟞",
+                    charge_char="󰢜"
                 ),
                 widget.Volume(
-                    fmt='V: {}',
+                    fmt='󰕾 {}',
                     background="94e2d5e6",
                     foreground="161320"
                 ),
