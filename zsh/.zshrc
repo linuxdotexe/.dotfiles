@@ -6,7 +6,7 @@ setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/user/.zshrc'
+zstyle :compinstall filename '/home/biggus/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -21,7 +21,7 @@ alias py='python3'
 alias i='sudo apt install'
 alias r='sudo apt remove'
 alias s='apt search'
-alias vim='lvim'
+alias vim='nvim'
 alias ls='exa -l -h'
 alias ll='exa -la -h'
 alias gc='git commit'
@@ -29,8 +29,8 @@ alias gs='git status'
 alias ga='git add'
 alias gp='git push origin'
 alias upd='sudo apt update && sudo apt upgrade'
-alias wmrc='lvim ~/.config/qtile/config.py'
-alias shellrc='lvim ~/.zshrc'
+alias wmrc='nvim ~/.config/qtile/config.py'
+alias shellrc='nvim ~/.zshrc'
 alias die='sudo shutdown now'
 alias teldie='killall telegram-desktop && exit'
 alias netres='sudo systemctl restart NetworkManager.service'
@@ -77,44 +77,12 @@ mkd(){
 export PATH=/home/biggus/.local/bin:$PATH
 # EO add pip to PATH
 
-# add psmq to PATH
-# export PATH=/home/user/.local/bin/psmq:$PATH
-
-# add blocks to PATH
-# export PATH=/home/user/.local/bin/blocks:$PATH
-# dynamic window titles (help from reddit)
-# case "$TERM" in
-#     xterm*|rxvt*)
-#         function xtitle () {
-#             builtin print -n -- "\e]0;$@\a"
-#         }
-#         ;;
-#     screen)
-#         function xtitle () {
-#             builtin print -n -- "\ek$@\e\\"
-#         }
-#         ;;
-#     *)
-#         function xtitle () {
-#         }
-# esac
-
-# function precmd () {
-#     xtitle "$(print -P $HOST: zsh '(%~)')"
-# }
-#  function preexec () {
-#     xtitle "Running $1"
-# }
-# EO dynamic window titles
-
 # Add files to .gitignore with one command
 function omit () {
     echo $1 >> .gitignore
 }
 # EO omit()
 
-# export PATH=$PATH:$HOME/.local/bin/todowalp
-#
 # starfish prompt setup
 eval "$(starship init zsh)"
 # EO starfish prompt setup
