@@ -128,8 +128,8 @@ keys = [
     ),
     Key(
         [mod], "b",
-        lazy.spawn("brave-browser"),
-        desc="Spawn Brave"
+        lazy.spawn("firefox"),
+        desc="Spawn Browser"
     ),
     # Screen lock
     Key(
@@ -154,19 +154,13 @@ groups = [
     Group(
         name="web",
         layout="max",
-        matches=[Match(wm_class=["Brave-browser"])],
-        spawn=["brave-browser"],
+        matches=[Match(wm_class=["firefox"])],
+        spawn=["firefox"],
         exclusive=True,
     ),
     Group(
         name="dev",
         matches=[Match(wm_class=["kitty", "Code"])],
-    ),
-    Group(
-        name="write",
-        layout="max",
-        matches=[Match(wm_class=["obsidian", "starc.AppImage"])],
-        exclusive=True,
     ),
     Group(
         name="chat",
@@ -175,9 +169,9 @@ groups = [
         spawn=["telegram-desktop", "discord"],
     ),
     Group(
-        name="ent",
+        name="write",
         layout="max",
-        matches=[Match(wm_class=["vlc"])],
+        matches=[Match(wm_class=["obsidian", "starc.AppImage"])],
         exclusive=True,
     ),
 ]
@@ -221,24 +215,24 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(
-                    background="11111be6",
+                    background="11111bbf",
                     filename="~/.config/qtile/img/1.png",
                     margin=5
                 ),
                 widget.Prompt(
                     fontsize=14,
                     foreground="161320",
-                    background="DDB6F2"
+                    background="DDB6F2bf"
                 ),
                 widget.GroupBox(
                     borderwidth=5,
                     active="bac2de",
                     inactive="6c7086",
-                    background="11111be6",
+                    background="11111bbf",
                     disable_drag=False,
                     font="CaskaydiaCove Nerd Font Mono",
                     highlight_method="line",
-                    highlight_color="181825e6",
+                    highlight_color="181825cc",
                     this_current_screen_border="cba6f7"
                 ),
                 widget.TaskList(
@@ -259,22 +253,11 @@ screens = [
                     psmq(),
                     font="CaskaydiaCove Nerd Font Mono Italic",
                     foreground="161320",
-                    background="cba6f7e6"
-                ),
-                widget.Wttr(
-                    location={"Vijayawada": "VIJ"},
-                    format=' %t',
-                    foreground="161320",
-                    background="fab387e6"
-                ),
-                widget.NvidiaSensors(
-                    format="󱤓 {temp}°C",
-                    foreground="161320",
-                    background="f9e2afe6"
+                    background="cba6f7bf"
                 ),
                 widget.Battery(
                     foreground="161320",
-                    background="a6e3a1e6",
+                    background="a6e3a1bf",
                     low_background="F28FAD",
                     low_foreground="161320",
                     low_percentage=0.2,
@@ -285,13 +268,13 @@ screens = [
                 ),
                 widget.Volume(
                     fmt='󰕾 {}',
-                    background="94e2d5e6",
+                    background="94e2d5bf",
                     foreground="161320"
                 ),
                 widget.Clock(
                     format="%dth %B, %I:%M %p",
                     foreground="161320",
-                    background="74c7ece6"
+                    background="74c7ecbf"
                 ),
                 widget.Systray(
                     background="302D4100"
@@ -304,7 +287,7 @@ screens = [
                 widget.QuickExit(
                     fmt="[X]",
                     foreground="161320",
-                    background="f38ba8e6"
+                    background="f38ba8bf"
                 ),
             ],
             30,
