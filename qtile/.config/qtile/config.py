@@ -163,10 +163,10 @@ groups = [
         matches=[Match(wm_class=["kitty", "Code"])],
     ),
     Group(
-        name="chat",
+        name="prod",
         layout="max",
-        matches=[Match(wm_class=["Telegram", "discord"])],
-        spawn=["telegram-desktop", "discord"],
+        matches=[Match(wm_class=["Todoist"])],
+        spawn=["todoist"],
     ),
     Group(
         name="write",
@@ -291,7 +291,7 @@ screens = [
                 ),
             ],
             30,
-            background="11111b00",
+            background="11111bbf",
         ),
     ),
 ]
