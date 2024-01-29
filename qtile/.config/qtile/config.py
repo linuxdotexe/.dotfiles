@@ -210,7 +210,7 @@ def psmq():
 
 screens = [
     Screen(
-        wallpaper='~/.config/qtile/img/walps/cavera.jpg',
+        wallpaper='~/.config/qtile/img/walps/space_thing.jpg',
         wallpaper_mode='fill',
         top=bar.Bar(
             [
@@ -277,7 +277,7 @@ screens = [
                     background="74c7ecbf"
                 ),
                 widget.Systray(
-                    background="302D4100"
+                    background="89b4fa00"
                 ),
                 widget.Sep(
                     foreground="302D4100",
