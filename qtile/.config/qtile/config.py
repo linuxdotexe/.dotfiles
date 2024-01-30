@@ -4,6 +4,8 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
+from spotify import Spotify
+
 import subprocess
 
 mod = "mod4"
@@ -252,11 +254,13 @@ screens = [
                     highlight_method="block",
                     center_aligned=True
                 ),
-                widget.TextBox(
-                    psmq(),
+                Spotify(
+                    play_icon="󰐊",
+                    pause_icon="󰽰",
+                    format="{icon} {artist} - {track}",
                     font="CaskaydiaCove Nerd Font Mono Italic",
+                    background="cba6f7bf",
                     foreground="161320",
-                    background="cba6f7bf"
                 ),
                 widget.Battery(
                     foreground="161320",
