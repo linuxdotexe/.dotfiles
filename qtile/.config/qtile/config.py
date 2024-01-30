@@ -9,6 +9,9 @@ import subprocess
 mod = "mod4"
 terminal = "kitty"
 
+wallpaper_folder = "~/.config/qtile/img/walps/"
+walp = wallpaper_folder + "ana.jpg"
+
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -210,7 +213,7 @@ def psmq():
 
 screens = [
     Screen(
-        wallpaper='~/.config/qtile/img/walps/ana.jpg',
+        wallpaper=walp,
         wallpaper_mode='fill',
         top=bar.Bar(
             [
