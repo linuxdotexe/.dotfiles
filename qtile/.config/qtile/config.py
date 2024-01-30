@@ -207,12 +207,6 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-def psmq():
-    psmq = str(subprocess.check_output("shuf -n1 ~/.config/qtile/small_quotes.txt", shell=True))
-    psmq = psmq[2:-3:]
-    psmq = psmq.replace("\\", "")
-    return psmq
-
 screens = [
     Screen(
         wallpaper=walp,
@@ -279,9 +273,14 @@ screens = [
                     foreground="161320"
                 ),
                 widget.Clock(
-                    format="%dth %B, %I:%M %p",
+                    format="%dth %b, %Y",
                     foreground="161320",
                     background="74c7ecbf"
+                ),
+                widget.Clock(
+                    format="%I:%M %p",
+                    foreground="161320",
+                    background="f9e2afbf"
                 ),
                 widget.Systray(
                     background="89b4fa00"
