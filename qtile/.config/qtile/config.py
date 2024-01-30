@@ -210,7 +210,7 @@ def psmq():
 
 screens = [
     Screen(
-        wallpaper='~/.config/qtile/img/walps/space_thing.jpg',
+        wallpaper='~/.config/qtile/img/walps/ana.jpg',
         wallpaper_mode='fill',
         top=bar.Bar(
             [
