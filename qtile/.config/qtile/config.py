@@ -11,8 +11,10 @@ import subprocess
 mod = "mod4"
 terminal = "kitty"
 
-wallpaper_folder = "~/.config/qtile/img/walps/"
-walp = wallpaper_folder + "ana.png"
+img_folder = "~/.config/qtile/img/"
+
+walp = img_folder + "walps/ana.png"
+logo = img_folder + "nan.png"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -223,7 +225,7 @@ screens = [
             [
                 widget.Image(
                     background="11111bbf",
-                    filename="~/.config/qtile/img/1.png",
+                    filename=logo,
                     margin=5
                 ),
                 widget.Prompt(
