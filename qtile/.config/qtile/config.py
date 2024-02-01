@@ -177,6 +177,7 @@ groups = [
         name="ent",
         layout="max",
         matches=[Match(wm_class=["spotify"])],
+        spawn=["spotify"],
         exclusive=True,
     ),
     Group(
