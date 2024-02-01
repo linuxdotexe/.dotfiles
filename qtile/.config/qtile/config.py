@@ -174,6 +174,12 @@ groups = [
         spawn=["todoist"],
     ),
     Group(
+        name="ent",
+        layout="max",
+        matches=[Match(wm_class=["spotify"])],
+        exclusive=True,
+    ),
+    Group(
         name="write",
         layout="max",
         matches=[Match(wm_class=["obsidian", "starc.AppImage"])],
@@ -194,7 +200,8 @@ layouts = [
         border_width=2,
         border_focus="#6E6C7E",
         border_normal="#161320",
-        border_on_single=True
+        border_on_single=False,
+        margin_on_single=False
     ),
     layout.Max(),
 ]
