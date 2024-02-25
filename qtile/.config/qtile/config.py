@@ -8,6 +8,14 @@ from spotify import Spotify
 
 import subprocess
 
+from ColorScheme import ColorScheme
+your_theme_name = "Lunaria Eclipse"
+CS = ColorScheme()
+try:
+    CS.set_colors_from_theme(your_theme_name)
+except Exception as e:
+    CS = ColorScheme()
+
 mod = "mod4"
 terminal = "kitty"
 
@@ -217,6 +225,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+BAR_BG = CS.black
 screens = [
     Screen(
         wallpaper=walp,
@@ -224,7 +233,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(
-                    background="11111bbf",
+                    background=BAR_BG,
                     filename=logo,
                     margin=5
                 ),
@@ -237,12 +246,12 @@ screens = [
                     borderwidth=5,
                     active="bac2de",
                     inactive="6c7086",
-                    background="11111bbf",
+                    background=BAR_BG,
                     disable_drag=False,
                     font="CaskaydiaCove Nerd Font Mono",
                     highlight_method="line",
                     highlight_color="181825cc",
-                    this_current_screen_border="cba6f7"
+                    this_current_screen_border=CS.bright_cyan
                 ),
                 widget.TaskList(
                     urgent_alert_method="text",
@@ -263,12 +272,12 @@ screens = [
                     pause_icon="󰽰",
                     format="{icon} {artist} - {track}",
                     font="CaskaydiaCove Nerd Font Mono Italic",
-                    background="cba6f7bf",
+                    background=CS.cyan,
                     foreground="161320",
                 ),
                 widget.Battery(
                     foreground="161320",
-                    background="a6e3a1bf",
+                    background=CS.green,
                     low_background="F28FAD",
                     low_foreground="161320",
                     low_percentage=0.2,
@@ -279,35 +288,35 @@ screens = [
                 ),
                 widget.Volume(
                     fmt='󰕾 {}',
-                    background="94e2d5bf",
+                    background=CS.blue,
                     foreground="161320"
                 ),
                 widget.Clock(
                     format="%dth %b, %Y",
                     foreground="161320",
-                    background="74c7ecbf"
+                    background=CS.magenta
                 ),
                 widget.Clock(
                     format="%I:%M %p",
                     foreground="161320",
-                    background="f9e2afbf"
+                    background=CS.bright_magenta
                 ),
                 widget.Systray(
                     background="89b4fa00"
                 ),
                 widget.Sep(
                     foreground="302D4100",
-                    background="302D4100",
+                    background=CS.white,
                     padding=5
                 ),
                 widget.QuickExit(
                     fmt="[X]",
                     foreground="161320",
-                    background="f38ba8bf"
+                    background=CS.red
                 ),
             ],
             30,
-            background="11111bbf",
+            background=CS.white,
         ),
     ),
 ]
