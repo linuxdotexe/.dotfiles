@@ -4,17 +4,20 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
-from spotify import Spotify
+from colors import colors
 
 import subprocess
 
-from ColorScheme import ColorScheme
-your_theme_name = "Lunaria Eclipse"
-CS = ColorScheme()
-try:
-    CS.set_colors_from_theme(your_theme_name)
-except Exception as e:
-    CS = ColorScheme()
+# TODO: write a better comment
+# incase you want to fetch colors from the internet, uncomment below code.
+
+# from ColorScheme import ColorScheme
+# your_theme_name = "Gotham"
+# CS = ColorScheme()
+# try:
+#     CS.set_colors_from_theme(your_theme_name)
+# except Exception as e:
+#     CS = ColorScheme()
 
 mod = "mod4"
 terminal = "kitty"
@@ -184,17 +187,14 @@ groups = [
         spawn=["todoist"],
     ),
     Group(
-        name="ent",
-        layout="max",
-        matches=[Match(wm_class=["spotify"])],
-        spawn=["spotify"],
-        exclusive=True,
-    ),
-    Group(
         name="write",
         layout="max",
         matches=[Match(wm_class=["obsidian", "starc.AppImage"])],
         exclusive=True,
+    ),
+    Group(
+        name="ent",
+        layout="max",
     ),
 ]
 
@@ -209,8 +209,8 @@ layouts = [
     layout.Columns(
         margin=4,
         border_width=2,
-        border_focus="#6E6C7E",
-        border_normal="#161320",
+        border_focus=colors["yellow"],
+        border_normal=colors["mantle"],
         border_on_single=False,
         margin_on_single=False
     ),
@@ -225,7 +225,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-BAR_BG = CS.black
+BAR_BG = colors["crust"] + "80"
 screens = [
     Screen(
         wallpaper=walp,
@@ -239,19 +239,19 @@ screens = [
                 ),
                 widget.Prompt(
                     fontsize=14,
-                    foreground="161320",
-                    background="DDB6F2bf"
+                    foreground=colors["base"],
+                    background=colors["mauve"]
                 ),
                 widget.GroupBox(
                     borderwidth=5,
-                    active="bac2de",
-                    inactive="6c7086",
+                    active=colors["text"],
+                    inactive=colors["overlay0"],
                     background=BAR_BG,
                     disable_drag=False,
                     font="CaskaydiaCove Nerd Font Mono",
                     highlight_method="line",
-                    highlight_color="181825cc",
-                    this_current_screen_border=CS.bright_cyan
+                    highlight_color=BAR_BG,
+                    this_current_screen_border=colors["mauve"]
                 ),
                 widget.TaskList(
                     urgent_alert_method="text",
@@ -261,25 +261,17 @@ screens = [
                     max_title_width=150,
                     padding=6,
                     icon_size=0,
-                    border="11111be6",
-                    foreground="f2cdcd",
+                    border=BAR_BG,
+                    foreground=colors["pink"],
                     borderwidth=0,
                     highlight_method="block",
                     center_aligned=True
                 ),
-                Spotify(
-                    play_icon="󰐊",
-                    pause_icon="󰽰",
-                    format="{icon} {artist} - {track}",
-                    font="CaskaydiaCove Nerd Font Mono Italic",
-                    background=CS.cyan,
-                    foreground="161320",
-                ),
                 widget.Battery(
-                    foreground="161320",
-                    background=CS.green,
-                    low_background="F28FAD",
-                    low_foreground="161320",
+                    foreground=colors["crust"],
+                    background=colors["green"],
+                    low_background=colors["red"],
+                    low_foreground=colors["crust"],
                     low_percentage=0.2,
                     format="{char} {percent:2.0%}",
                     full_char="󰂅",
@@ -288,35 +280,35 @@ screens = [
                 ),
                 widget.Volume(
                     fmt='󰕾 {}',
-                    background=CS.blue,
-                    foreground="161320"
+                    background=colors["lavender"],
+                    foreground=colors["crust"],
                 ),
                 widget.Clock(
                     format="%dth %b, %Y",
-                    foreground="161320",
-                    background=CS.magenta
+                    foreground=colors["crust"],
+                    background=colors["blue"]
                 ),
                 widget.Clock(
                     format="%I:%M %p",
-                    foreground="161320",
-                    background=CS.bright_magenta
+                    foreground=colors["crust"],
+                    background=colors["mauve"]
                 ),
                 widget.Systray(
-                    background="89b4fa00"
+                    background=BAR_BG
                 ),
                 widget.Sep(
-                    foreground="302D4100",
-                    background=CS.white,
+                    foreground=colors["crust"],
+                    background=BAR_BG,
                     padding=5
                 ),
                 widget.QuickExit(
                     fmt="[X]",
-                    foreground="161320",
-                    background=CS.red
+                    foreground=colors["crust"],
+                    background=colors["red"]
                 ),
             ],
             30,
-            background=CS.white,
+            background=colors["crust"] + "80",
         ),
     ),
 ]
