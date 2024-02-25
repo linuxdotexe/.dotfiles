@@ -16,3 +16,5 @@ Feel free to make an issue or PR. Both are very welcome.
 ## Contributors
 
 Hearty thanks to [@himabindu-run](https://github.com/himabindu-run) for pointing out a typo in the insults and fixing it.
+
+Hearty thanks to [@abhishekyelley](https://github.com/abhishekyelley) for making a module for colors. His ColorSchemes.py file opened up possibilities to fetch any color scheme from [Gogh](https://gogh-co.github.io/Gogh/).
