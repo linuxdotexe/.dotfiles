@@ -24,7 +24,7 @@ terminal = "kitty"
 
 img_folder = "~/.config/qtile/img/"
 
-walp = img_folder + "walps/ana.png"
+walp = img_folder + "walps/ign-0002.png"
 logo = img_folder + "nan.png"
 
 keys = [
@@ -118,6 +118,11 @@ keys = [
         desc="Shutdown Qtile"
     ),
     Key(
+        [mod], "l",
+        lazy.spawn("gnome-screensaver-command -l"),
+        desc="Spawn a command using a prompt widget"
+    ),
+    Key(
         [mod], "space",
         lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"
@@ -146,7 +151,7 @@ keys = [
     ),
     Key(
         [mod], "b",
-        lazy.spawn("firefox"),
+        lazy.spawn("brave-browser"),
         desc="Spawn Browser"
     ),
     # Screen lock
@@ -172,8 +177,8 @@ groups = [
     Group(
         name="web",
         layout="max",
-        matches=[Match(wm_class=["firefox"])],
-        spawn=["firefox"],
+        matches=[Match(wm_class=["firefox", "Brave-browser"])],
+        spawn=["brave-browser"],
         exclusive=True,
     ),
     Group(
@@ -294,11 +299,13 @@ screens = [
                     background=colors["mauve"]
                 ),
                 widget.Systray(
-                    background=BAR_BG
+                    # background=BAR_BG,
+                    background="#00000000",
                 ),
                 widget.Sep(
                     foreground=colors["crust"],
-                    background=BAR_BG,
+                    # background=BAR_BG,
+                    background="#00000000",
                     padding=5
                 ),
                 widget.QuickExit(
@@ -341,4 +348,5 @@ auto_minimize = True
 subprocess.run("xfce4-power-manager &", shell=True)
 subprocess.run("nm-applet &", shell=True)
 subprocess.run("picom &", shell=True)
+subprocess.run("gnome-screensaver &", shell=True)
 
