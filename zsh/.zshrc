@@ -22,8 +22,6 @@ alias i='sudo apt install'
 alias r='sudo apt remove'
 alias s='apt search'
 alias vim='nvim'
-alias ls='exa -l -h'
-alias ll='exa -la -h'
 alias gc='git commit'
 alias gs='git status'
 alias ga='git add'
@@ -37,20 +35,16 @@ alias netres='sudo systemctl restart NetworkManager.service'
 alias ntp='sudo timedatectl set-ntp true'
 alias oc='code .;exit'
 alias bs='acpi -i'
-alias td='killall dunst;notify-send foo'
+alias ls='ls --color=auto'
+alias ll='ls -alF'
 # EO aliases
 
 # exports
 export EDITOR=nvim
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 export TERM=xterm
 export TERMINAL=kitty
-export BAT_THEME="Sublime Snazzy"
 # EO exports
 
-# source /etc/profile for fastboot and adb to work
-source /etc/profile
-# EO source
 # insulter
 if [ -f ~/.zsh/zsh-insulter/src/zsh.command-not-found ]; then
     . ~/.zsh/zsh-insulter/src/zsh.command-not-found

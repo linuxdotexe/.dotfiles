@@ -24,8 +24,8 @@ terminal = "kitty"
 
 img_folder = "~/.config/qtile/img/"
 
-walp = img_folder + "walps/ign-0002.png"
-logo = img_folder + "nan.png"
+walp = img_folder + "walps/neo2.png"
+logo = img_folder + "logo.png"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -179,7 +179,6 @@ groups = [
         layout="max",
         matches=[Match(wm_class=["firefox", "Brave-browser"])],
         spawn=["brave-browser"],
-        exclusive=True,
     ),
     Group(
         name="dev",
@@ -214,7 +213,7 @@ layouts = [
     layout.Columns(
         margin=4,
         border_width=2,
-        border_focus=colors["yellow"],
+        border_focus=colors["base"],
         border_normal=colors["mantle"],
         border_on_single=False,
         margin_on_single=False
@@ -230,7 +229,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-BAR_BG = colors["crust"] + "80"
+BAR_BG = colors["crust"]
 screens = [
     Screen(
         wallpaper=walp,
@@ -244,19 +243,20 @@ screens = [
                 ),
                 widget.Prompt(
                     fontsize=14,
-                    foreground=colors["base"],
-                    background=colors["mauve"]
+                    foreground=colors["mantle"],
+                    background=colors["green"]
                 ),
                 widget.GroupBox(
                     borderwidth=5,
                     active=colors["text"],
-                    inactive=colors["overlay0"],
+                    inactive=colors["overlay"],
                     background=BAR_BG,
                     disable_drag=False,
                     font="CaskaydiaCove Nerd Font Mono",
                     highlight_method="line",
                     highlight_color=BAR_BG,
-                    this_current_screen_border=colors["mauve"]
+                    hide_unused=True,
+                    this_current_screen_border=colors["yellow"]
                 ),
                 widget.TaskList(
                     urgent_alert_method="text",
@@ -267,7 +267,7 @@ screens = [
                     padding=6,
                     icon_size=0,
                     border=BAR_BG,
-                    foreground=colors["pink"],
+                    foreground=colors["yellow"],
                     borderwidth=0,
                     highlight_method="block",
                     center_aligned=True
@@ -285,18 +285,18 @@ screens = [
                 ),
                 widget.Volume(
                     fmt='󰕾 {}',
-                    background=colors["lavender"],
+                    background=colors["blue"],
                     foreground=colors["crust"],
                 ),
                 widget.Clock(
                     format="%dth %b, %Y",
                     foreground=colors["crust"],
-                    background=colors["blue"]
+                    background=colors["yellow"]
                 ),
                 widget.Clock(
                     format="%I:%M %p",
                     foreground=colors["crust"],
-                    background=colors["mauve"]
+                    background=colors["teal"],
                 ),
                 widget.Systray(
                     # background=BAR_BG,
@@ -315,7 +315,7 @@ screens = [
                 ),
             ],
             30,
-            background=colors["crust"] + "80",
+            background=colors["crust"],
         ),
     ),
 ]
@@ -345,8 +345,6 @@ focus_on_window_activation = "smart"
 auto_minimize = True
 
 # Auto Start
-subprocess.run("xfce4-power-manager &", shell=True)
 subprocess.run("nm-applet &", shell=True)
 subprocess.run("picom &", shell=True)
-subprocess.run("gnome-screensaver &", shell=True)
 
