@@ -299,13 +299,11 @@ screens = [
                     background=colors["teal"],
                 ),
                 widget.Systray(
-                    # background=BAR_BG,
-                    background="#00000000",
+                    background=BAR_BG,
                 ),
                 widget.Sep(
                     foreground=colors["crust"],
-                    # background=BAR_BG,
-                    background="#00000000",
+                    background=BAR_BG,
                     padding=5
                 ),
                 widget.QuickExit(
